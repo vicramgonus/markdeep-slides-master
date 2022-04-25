@@ -25,6 +25,65 @@
 
 ---
 
+## Overview
+
+<div style="display: flex; justify-content: center; align-items: center;"><video src="videos/Initial.mp4" style="width:90%" controls></video></div>
+
+---
+
+
+## Overview
+
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
+<div>
+
+1. Fundamentos de la Lengua de Signos.
+    - Aspectos generales y motivación
+    - Algunos aspectos lingüísticos
+    - Métodos de Representación
+
+</div>
+<div>
+
+2. Reconocimiento y traducción
+    - Tecnologías y modos.
+    - Detección
+    - Identificación y Clasificación
+    - Traducción
+
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
+<div>
+
+3. Producción 
+    - Punto1
+    - Punto2
+    - Punto3
+    - etc.
+
+</div>
+<div>
+
+4. Datasets y Métricas de evaluación
+    - Punto1
+    - Punto2
+    - Punto3
+    - etc.
+
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; "></div>
+<div style="grid-column-start: 2;">
+
+5. El futuro de SLR junto a NLP. Conclusiones
+
+</div>
+
+</div>
+
+
+---
+
 # Lengua de Signos - Fundamentos
 
 ---
@@ -185,7 +244,7 @@ Las lenguas de signos constan de una estructura lingüística completa que cumpl
             <div style="color: rgb(163, 42, 42);">Referencias</div>
         </div>
         <div style="display: flex; flex-direction: column;">
-            <div style="color: rgb(163, 42, 42);">Finger </div>
+            <div style="color: rgb(163, 42, 42);">Deletreo con dedos </div>
         </div>
     </div>
     </center>
@@ -240,7 +299,7 @@ Las lenguas de signos constan de una estructura lingüística completa que cumpl
     </div>
 </center>
     
-Recursos disponibles:  <span style="color: rgb(163, 42, 42);"></span>Diccionarios</span>, <span style="color: rgb(163, 42, 42);">Símbolos aislados</span>, <span style="color: rgb(163, 42, 42);">Deletreo manual</span>, <span style="color: rgb(163, 42, 42);">Signos continuos</span>.
+Recursos disponibles:  <span style="color: rgb(163, 42, 42);">Diccionarios</span>, <span style="color: rgb(163, 42, 42);">Símbolos aislados</span>, <span style="color: rgb(163, 42, 42);">Deletreo manual</span>, <span style="color: rgb(163, 42, 42);">Signos continuos</span>.
 
         
     Un problema añadido: <span style="color: rgb(163, 42, 42);">Anonimización</span>
@@ -262,26 +321,25 @@ Un sistema traductor: Lenguaje signado \(\longleftrightarrow\) Lenguaje Oral inv
 Detección y reconocimiento, Traducción y Producción.
 </center>
 
-<! POR JULIAN >
 
 ---
 
-# Tareas en Lenguas de Signos I. <br> Reconocimiento, Detección, Identificación y Segmentación.
+# Tareas en Lenguas de Signos I. <br> Reconocimiento y traducción
 
 ---
 
-## Reconocimiento.
-
+## Reconocimiento (SLR)
 
 Tarea de reconocer los propios elementos discretos del lenguaje de signos, que incluye todo el proceso de seguimiento e identificación
 de los signos realizados y su conversión en palabras y expresiones semánticamente significativas.
 
 
-* <span style="color: rgb(163, 42, 42);">Métodos basados en visión por computador</span>: uso de una cámara y de técnicas procedentes del campo de <span style="color: rgb(163, 42, 42);">visión artificial</span>.
+* <span style="font-weight: bold;">Tecnología</span>:  <span style="color: rgb(163, 42, 42);"> Aproximaciones basadas sólo en imagen </span> (con uso exclusivo de cámaras y procesamiento basado en Visión por Computador) / <span style="color: rgb(163, 42, 42);">Aproximaciones basadas en multi-sensores</span> (se cuenta con componentes adicionales: guantes, acelerómetros,... procesando la información de forma conjunta).
 
-* <span style="color: rgb(163, 42, 42);">Aproximaciones basadas en guantes y sensores</span>: uso de instrumentos y sensores específicos que ayudan en el proceso de reconocimiento de los signos.
+* <span style="font-weight: bold;">Objetivo</span>:  <span style="color: rgb(163, 42, 42);">Reconocimiento aislado</span> (reconocimiento de cada uno de los símbolos por separado) / <span style="color: rgb(163, 42, 42);">Reconocimiento continuo</span> (la detección y clasificación se realiza a partir de varios símbolos a través del tiempo).
 
 --- 
+
 
 ## Reconocimiento. Métodos basados en visión por computador (VBA).
 
@@ -312,60 +370,17 @@ de los signos realizados y su conversión en palabras y expresiones semánticame
 
 --- 
 
-## Pros y contras.
+## Reconocimiento. Reconocimiento Aislado vs Reconocimiento continuo
 
+Actualmente la mayoría de los modelos de reconocimiento se dedican al reconocimiento asilado, eso es, al reconocimiento de cada signo por separado. Varias limitaciones:
 
-<center>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-c3ow"></th>
-    <th class="tg-7btt">Pros</th>
-    <th class="tg-7btt">Contras</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-7btt" rowspan="3">VBA</td>
-    <td class="tg-0pky">Pocos recursos</td>
-    <td class="tg-0pky">Dependencia del entorno. Ej: iluminación</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Análisis completo de la información</td>
-    <td class="tg-0pky">Tiempo de procesamiento</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">Problema de superposición de manos</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt" rowspan="3">GBA</td>
-    <td class="tg-0pky">Alta precisión</td>
-    <td class="tg-0pky">Inversión tecnológica y equipo</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">Detección exclusiva de manos. Pérdida información gestual</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">Coste elevado</td>
-  </tr>
-</tbody>
-</table>
-</center>
+* Pérdida del contexto, especialmente grave en el tratamiento de las Referencias
+* Problemas de análisis temporal diferenciación de signos por movimiento: Oclusión, Tracking, ... 
+* Dificultad en el empleo de técnicas basadas en lenguaje en vez de en visión 
 
----
+Nuevas líneas: <span style="color: rgb(163, 42, 42);">Análisis continuo</span>. Con gran influencia de técnicas de <u>análisis temporal</u>: Hidden Markov Models (HMM), Dynamic Time Wrapping, Conditional Random Fields (CRF), Support Vector Machines (SVM), Deep Learning (3D-CNN-LSTM, ...)
+
+--- 
 
 ## Detección.
 
@@ -434,18 +449,6 @@ Detección de los límites de los signos en un fotograma u oraciones para dividi
 
 --- 
 
-## Reconocimiento aislado y continuo.
-
-TODO
-
-artículos para completar esta diapo: 
-
-https://link.springer.com/article/10.1007/s12652-021-03418-z
-https://ieeexplore.ieee.org/document/9090828
-https://link.springer.com/article/10.1007/s11042-019-7263-7#:~:text=In%20general%2C%20there%20are%20two,is%20referred%20as%20manual%20components.
-
---- 
-
 ## Framework general.
 El reconocimiento del lenguaje de signos consta de tres fases principales: 
 
@@ -460,13 +463,31 @@ El reconocimiento del lenguaje de signos consta de tres fases principales:
     </div>
 </center>
 
---- 
+## Traducción
 
-# Tareas en Lenguas de Signos II. <br> Traducción.
+Aunque la traducción se suele entender como la transformación de lenguaje signado en vídeo a lenguaje oral/texto, existen distintas modalidades que pueden servir como simplificaciones intermedias.
+
+<center>
+    <div style="width:58%; display: flex; flex-direction: column; justify-content: start;">
+        <img src="images/translation.png">
+		<div><span style="font-style: italic; font-size: 20;"> Fuente: [https://sign-language-processing.github.io/](Sign Language Processing) </span></div>
+    </div>
+</center>
+
 
 --- 
 
 ## Traducción
+
+Actualmente los modelos que mejores resultados obtienen provienen de técnicas hibrídas entre los dos campos de gran desarrollo actualmente : Visión y PLN. **¡ÉSTE ES EL FUTURO DEL CAMPO!**
+
+
+<center>
+    <div style="width:58%; display: flex; flex-direction: column; justify-content: start;">
+        <img src="images/translation2.png">
+		<div><span style="font-style: italic; font-size: 20;"> Fuente: [Sign language transformers](https://openaccess.thecvf.com/content_CVPR_2020/papers/Camgoz_Sign_Language_Transformers_Joint_End-to-End_Sign_Language_Recognition_and_Translation_CVPR_2020_paper.pdf) </span></div>
+    </div>
+</center>
 
 --- 
 
@@ -523,9 +544,12 @@ Aunque las lenguas de signos y las habladas difieren en cuanto a la modalidad, d
 		* Insuficientes para las construcciones espaciales de la lengua de signos.
 		* Glosas específicas de cada lengua, no estandarizadas.
 
-¿Cómo definimos las unidades léxicas en las lenguas de signos? <br>
-¿Hasta qué punto las unidades fonológicas de las lenguas de signos pueden asignarse a unidades léxicas? <br>
-¿En qué medida las ideas utilizadas en el reconocimiento automático del habla pueden aplicarse a las lenguas de signos?
+
+<span style="font-weight: bold;"> Preguntas abiertas:</span>
+
+- ¿Cómo definimos las unidades léxicas en las lenguas de signos? 
+- ¿Las unidades fonológicas de las lenguas de signos pueden asignarse a unidades léxicas?
+- ¿Pueden las técnicas utilizadas en *Speech Recognition* ser aplicadas las lenguas de signos?
 
 --- 
 
@@ -535,9 +559,11 @@ Aunque las lenguas de signos y las habladas difieren en cuanto a la modalidad, d
 	* El etiquetado de partes del discurso (PDD) y el análisis sintáctico son fundamentales para comprender el significado de las palabras en contexto.
 	* Se debe definir en qué medida el etiquetado PDD y el análisis sintáctico para los idiomas hablados también se generalizan a los lenguajes de signos.
 
-¿Podemos basarnos en teorías lingüísticas para diseñar características y reglas que realicen estas tareas? <br>
-¿Cómo se expresan las características morfológicas? <br>
-¿necesitamos un nuevo conjunto de etiquetas y PDD para los lenguajes de signos? 
+<span style="font-weight: bold;"> Preguntas abiertas:</span>
+
+- ¿Existen teorías lingüísticas para diseñar características y reglas que realicen estas tareas? 
+- ¿Cómo se expresan las características morfológicas?
+- ¿Necesitamos un nuevo conjunto de etiquetas y PDD para los lenguajes de signos? 
 
 --- 
 
@@ -545,11 +571,13 @@ Aunque las lenguas de signos y las habladas difieren en cuanto a la modalidad, d
 
 * <span style="color: rgb(163, 42, 42);">Reconocimiento de entidades nombradas</span>
 	* Las entidades nombradas en los lenguajes de señas pueden producirse mediante una secuencia de deletreo manual, un signo o incluso mediante la pronunciación del nombre mientras que la referencia es señalanda..
-	* Recnocimiento de entidades nombradas para anonimizar.
+	* Un detalle importante: **La Anonimización**.
 
-¿Cuáles son los marcadores visuales de las entidades nombradas? <br>
-¿Cómo se presentan y referencian? <br>
-¿Cómo se establecen las relaciones entre ellos? <br>
+<span style="font-weight: bold;"> Preguntas abiertas:</span>
+
+- ¿Cuáles son los marcadores visuales de las entidades nombradas?
+- ¿Cómo se presentan y referencian?
+- ¿Cómo se establecen las relaciones entre ellos?
 
 --- 
 
@@ -559,15 +587,31 @@ Es necesaria la colaboración de las comunidades de investigación multimodal y 
 
 El SLP está especialmente sujeta a tres de los principales retos técnicos en el aprendizaje automático multimodal:
 
-* <span style="color: rgb(163, 42, 42);">Traducción</span>: ¿cómo mapeamos la información visual-gestual a/desde la información audio-oral y textual?
-* <span style="color: rgb(163, 42, 42);">alineación</span>: ¿cómo relacionamos las unidades de la lengua de signos con las unidades de la lengua hablada?
-* <span style="color: rgb(163, 42, 42);">co-aprendizaje</span>: ¿podemos transferir el conocimiento de la lengua hablada a la lengua de signos?
+<span style="font-weight: bold;"> Puntos clave:</span>
+
+* <span style="color: rgb(163, 42, 42);">Traducción</span>: ¿cómo pasar la información visual-gestual a/desde la información oral-textual?
+* <span style="color: rgb(163, 42, 42);">alineación</span>: ¿cómo relacionar las unidades de la lengua de signos con las de la lengua hablada?
+* <span style="color: rgb(163, 42, 42);">co-aprendizaje</span>: ¿cómo aprovechar el conocimiento de la lengua hablada en la lengua de signos?
 
 
 --- 
-## Más allá del lenguaje de signos
 
+## Conclusiones finales
 
+---
+
+<center style="margin-top: 350px;">
+    <span style="font-weight: bolder;">Procesamiento del Lenguaje de Signos</span><br>
+    <span style="font-weight: lighter; font-size: 35;">Fundamentos, tecnologías y retos actuales</span>
+    </center>
+    
+    <center style="margin-top: 200px;">
+    <span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio B. Apellido, J. Antonio Apellido, Julián M. Apellido, Víctor Ramos</span><br>
+    </center>
+    
+    <center style="margin-top: 100px;">
+        <span style="font-style: italic; font-size: 30;">Fuente Ppal: [Including Signed Languages in Natural Language Processing](https://aclanthology.org/2021.acl-long.570) (Yin et al., ACL 2021) </span><br>
+        </center>
 
 
 
