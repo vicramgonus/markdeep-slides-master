@@ -313,7 +313,8 @@ de los signos realizados y su conversión en palabras y expresiones semánticame
 --- 
 
 ## Pros y contras.
-TODO: esta diapositiva es feísima
+
+
 <center>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -371,7 +372,19 @@ TODO: esta diapositiva es feísima
 Tarea de clasificación binaria de cualquier fotograma dado de un vídeo que verifica si una persona está utilizando
 lenguaje de signos o no.
 
-TODO
+* <span style="color: rgb(163, 42, 42);">Borg y Camilleri. 2019</span>: Procesamiento de los fotogramas en bruto basado en redes convolucionales.
+
+* <span style="color: rgb(163, 42, 42);">Moryossef et al. 2020</span>: Detección a partir de la pose estimada y no del fotograma en bruto.
+
+<center>
+<div style=" width: 75%; display: flex; flex-direction: row; justify-content: center;">
+    <img src="images/detection_2.png" style="width:45%"> 
+    <img src="images/detection_1.png" style="width:42%"> 
+</div> 
+</center>
+
+Problema: <span style="color: rgb(163, 42, 42);">Insuficientes datasets correctamente anotados para evaluación de datos reales.</span>
+
 
 --- 
 
@@ -380,7 +393,13 @@ TODO
 
 La tarea de identificación de lenguas de signos se define como la clasificación entre dos o más lenguas de signos.
 
-TODO
+* <span style="color: rgb(163, 42, 42);">Gebre, Wittenburg y Heskes.2013</span>: un clasificador random forest simple puede distinguir entre la lengua de signos británica (BSL) y la lengua de signos griega(ENN) con F1 del 95%.
+
+* <span style="color: rgb(163, 42, 42);">Monteiro et al. 2016</span>: Misma arquitectura. Diferencia entre la lengua de signos británica y la lengua de signos francesa con F1 de 98% de en vídeos con fondos estáticos, y entre la lengua de signos americana y británica con un 70%.
+
+
+Atribuyen su éxito principalmente a los diferentes sistemas de deletreo con los dedos, que es a dos manos en el caso británico y a una mano en el caso estadounidense.
+
 
 --- 
 
@@ -389,7 +408,29 @@ TODO
 
 Detección de los límites de los signos en un fotograma u oraciones para dividirlos en unidades lingüísticas con significado.
 
-TODO
+* <strong>Lenguaje hablado</strong>: División en el tiempo como secuencia lineal.
+
+<center style="color: rgb(163, 42, 42);">¡Simultaneaidad del lenguaje signado!</center>
+
+* <strong>Lenguaje signado</strong>: Concepto de palabra difuso. Aproximación lineal insuficiente.
+
+* <span style="color: rgb(163, 42, 42);">Farag y Brock. 2019</span>: Detección de los límites de las palabras dentro de expresiones en el lenguaje de signos japonés a partir de las posiciones tridimensionales de las articulaciones del cuerpo.
+
+* <span style="color: rgb(163, 42, 42);">Bull, Gouiffès y Braffort. 2020</span>: Segmentación de lengua de signos francesa que han sido correctamente subtitulados a partir de la alienación de los mismo.
+
+--- 
+
+## Segmentación.
+
+* <span style="color: rgb(163, 42, 42);">Gül Varol et al. 2021</span>:Mejoran las métricas obtenidas por Farag y Brock con una arquitectura que acopla una red convolucional espacio-temporal 3D (I3D) con una red convolucional temporal multietapa (1D).
+
+<center>
+    <div style="width:66%; display: flex; flex-direction: column; justify-content: start;">
+        <img src="images/segmentation.png">
+		<div><span style="font-style: italic; font-size: 20;"> Fuente: Gül Varol et al. 2021 </span></div>
+    </div>
+</center>
+
 
 --- 
 
@@ -402,6 +443,23 @@ artículos para completar esta diapo:
 https://link.springer.com/article/10.1007/s12652-021-03418-z
 https://ieeexplore.ieee.org/document/9090828
 https://link.springer.com/article/10.1007/s11042-019-7263-7#:~:text=In%20general%2C%20there%20are%20two,is%20referred%20as%20manual%20components.
+
+--- 
+
+## Framework general.
+El reconocimiento del lenguaje de signos consta de tres fases principales: 
+
+* Segmentación de imagen y seguimiento.
+* Extracción de características.
+* Clasificación. 
+
+<center>
+    <div style="width:58%; display: flex; flex-direction: column; justify-content: start;">
+        <img src="images/general_framework.png">
+		<div><span style="font-style: italic; font-size: 20;"> Fuente: Subhash Chand Agrawal et al. 2016 </span></div>
+    </div>
+</center>
+
 --- 
 
 # Tareas en Lenguas de Signos II. <br> Traducción.
@@ -416,101 +474,7 @@ https://link.springer.com/article/10.1007/s11042-019-7263-7#:~:text=In%20general
 
 --- 
 
-## Objetivo
-
-Lograr la traducción de un lenguaje fuente, ya sea en modalidad escrita, hablada o visual 
-(en caso de otros lenguajes de signos) a un flujo contínuo de lenguaje de signos en un nivel
-comparable al de un traductor humano.
-
-Existen diferentes técnicas, pero generalmente se reduce al uso de alguna representación humana
-a modo de un avatar. La forma de formar este avatar difiere, pudiendo generarse en base a
-animaciones predefinidas por glosa, accediendo directamente al esqueleto, o incluso la Generación
-completa del video sin utilizar un modelo 3D.
-
---- 
-
-## Retos
-
-Tanto el reconocimiento como la producción de signos deben enfrentar retos críticos. Uno de ellos es
-la variabilidad visual de los signos, la cual es dependiente de la forma de las manos, orientación de las
-palmas, movimiento, locación, expresiones faciales y otras señales no manuales.
-
-Otro reto es el desarrollo de un sistema de SLP fotorrealista para generar el signo, palabra u oración
-correspondientes en base a un texto o voz en lenguaje hablado dentro de una situación del mundo real.
-
-La traducción desde lenguaje hablado a lenguaje de señas tomando en cuenta las reglas gramaticales
-y estructuras linguísticas del SL es un problema muy complejo. No se trata de un problema de mapeo
-entre texto/voz a signos palabra por palabra, el problema surge de las diferencias entre la tokenización
-y el orden de las palabras en cada lenguaje.
-
---- 
-
-## Modalidades de Input
-
-* <span style="color: rgb(163, 42, 42);">Visión</span>
-En el caso de la visión, suelen utilizarse datos en formato RGB y esqueletos. 
-Los datos RGB pueden ser imágenes o videos en alta resolución.
-
-* <span style="color: rgb(163, 42, 42);">Linguística</span>
-Comúnmente texto. El texto es procesado usando diferentes modelos de reconocimiento.
-es fundamental especializar el sistema en un dominio en particular.
-Para no comenzar desde cero, se suele utilizar transfer learning.
-
-
---- 
-
-## Modelos Propuestos: Avatar
-
-* <span style="color: rgb(163, 42, 42);">Qué son</span>
-Técnica para mostrar una conversación de signos sin utilizar un humano, normalmente
-utilizando modelos 3D animados, los cuales se pueden almacenar de manera más eficiente que videos.
-Estos modelos pueden replicar el movimiento de los dedos, manos, gestos faciales y movimiento corporal.
-También se puede programar para ser utilizado en conjunto con diferentes lenguajes de signos
-
-* <span style="color: rgb(163, 42, 42);">Cómo producirlos</span>
-Para formar cada movimiento del avatar, es necesaria información de captura de movimiento y glosas
-parametrizadas.
-
-* <span style="color: rgb(163, 42, 42);">No son muy aceptados en la comunidad sorda</span>
-
---- 
-
-## Modelos Propuestos: Motion Graph
-
-Motion Graph (MG) es un método de computación gráfica para animar personajes dinámicamente. 
-Se define como un grafo dirigido construido a base de datos de captura de movimiento.Motion Graph (MG) es un método de computación gráfica para animar personajes dinámicamente. Se define como un grafo dirigido construido a base de datos de captura de movimiento.
-
-Mediante un cálculo de la diferencia entre dos grafos o poses deseadas, se puede generar
-la transición del modelo entre ellas.
-
---- 
-
-## Modelos Propuestos: NMT
-
-Las NMT son modelos que utilizan redes neuronales para predecir la probabilidad de una secuencia de palabras, 
-típicamente modelando oraciones completas en un modelo integrado.
-
-Principal ejemplo creado en base a esta técnica es Text2Sign.
-
-<center>
-<div style="width:40%; display: flex; flex-direction: column; justify-content: start;">
-    <img src="images/text2sign.jpg">
-</div>
-</center>
-
---- 
-
-## Modelos Propuestos: Generación de Imagen/Video
-
-Utilizando técnicas generativas de deep learning, con arquitecturas de redes neuronales en forma de
-variable auto-encoders (VAEs) y generative adversarial networks (GANs), se pueden dejar de lado algunos
-pasos de diseño y generar directamente un video.
-
-https://sign.mt/
-
---- 
-
-# Inclusión de SLP en el marco NLP.
+## Producción
 
 --- 
 
@@ -538,6 +502,69 @@ https://sign.mt/
 
 ---
 
+## Inclusión de SLP en el marco NLP
+
+Aunque las lenguas de signos y las habladas difieren en cuanto a la modalidad, dado que ambas expresan los niveles linguísticos propios de los lenguajes naturales, las teorías fundamentales en NLP pueden y deben extenderse a las lenguas de signos.
+
+* <span style="color: rgb(163, 42, 42);">Herramientas de NLP</span>: 
+	* Tokenizadores.
+	* Analizadores sintacticos.
+	* Reconocimiento de entidades nombradas.
+	* Resolución de correferencia.
+
+--- 
+
+## Inclusión de SLP en el marco NLP
+
+* <span style="color: rgb(163, 42, 42);">Tokenizadores</span>
+	* La gran mayoría de los métodos de PLN requieren una entrada  discreta (token).
+	* Necesidad de herramientas de tokenización adecuadas que mapeen los vídeos de las lenguas de signos a una representación discreta y precisa con una mínima pérdida de información.
+	* Los sistemas y conjuntos de datos de PLN existentes suelen utilizar glosas como unidades léxicas discretas. Problemas:
+		* Insuficientes para las construcciones espaciales de la lengua de signos.
+		* Glosas específicas de cada lengua, no estandarizadas.
+
+¿Cómo definimos las unidades léxicas en las lenguas de signos? <br>
+¿Hasta qué punto las unidades fonológicas de las lenguas de signos pueden asignarse a unidades léxicas? <br>
+¿En qué medida las ideas utilizadas en el reconocimiento automático del habla pueden aplicarse a las lenguas de signos?
+
+--- 
+
+## Inclusión de SLP en el marco NLP
+
+* <span style="color: rgb(163, 42, 42);">Analizadores sintácticos</span>
+	* El etiquetado de partes del discurso (PDD) y el análisis sintáctico son fundamentales para comprender el significado de las palabras en contexto.
+	* Se debe definir en qué medida el etiquetado PDD y el análisis sintáctico para los idiomas hablados también se generalizan a los lenguajes de signos.
+
+¿Podemos basarnos en teorías lingüísticas para diseñar características y reglas que realicen estas tareas? <br>
+¿Cómo se expresan las características morfológicas? <br>
+¿necesitamos un nuevo conjunto de etiquetas y PDD para los lenguajes de signos? 
+
+--- 
+
+## Inclusión de SLP en el marco NLP
+
+* <span style="color: rgb(163, 42, 42);">Reconocimiento de entidades nombradas</span>
+	* Las entidades nombradas en los lenguajes de señas pueden producirse mediante una secuencia de deletreo manual, un signo o incluso mediante la pronunciación del nombre mientras que la referencia es señalanda..
+	* Recnocimiento de entidades nombradas para anonimizar.
+
+¿Cuáles son los marcadores visuales de las entidades nombradas? <br>
+¿Cómo se presentan y referencian? <br>
+¿Cómo se establecen las relaciones entre ellos? <br>
+
+--- 
+
+## Hacia una PNL lingüísticamente informada y multimodal
+
+Es necesaria la colaboración de las comunidades de investigación multimodal y de SLP para desarrollar modelos potentes de SLP apoyados herramientas básicas de PLN como las comentadas, todo ello mientras se procesa y relaciona la información procedente de las modalidades lingüística y visual
+
+El SLP está especialmente sujeta a tres de los principales retos técnicos en el aprendizaje automático multimodal:
+
+* <span style="color: rgb(163, 42, 42);">Traducción</span>: ¿cómo mapeamos la información visual-gestual a/desde la información audio-oral y textual?
+* <span style="color: rgb(163, 42, 42);">alineación</span>: ¿cómo relacionamos las unidades de la lengua de signos con las unidades de la lengua hablada?
+* <span style="color: rgb(163, 42, 42);">co-aprendizaje</span>: ¿podemos transferir el conocimiento de la lengua hablada a la lengua de signos?
+
+
+--- 
 ## Más allá del lenguaje de signos
 
 
