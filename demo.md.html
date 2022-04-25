@@ -262,11 +262,194 @@ Un sistema traductor: Lenguaje signado \(\longleftrightarrow\) Lenguaje Oral inv
 Detección y reconocimiento, Traducción y Producción.
 </center>
 
----
-
-# Tareas en Lenguas de Signos I. <br> Detección, Reconocimiento y Segmentación.
+<! POR JULIAN >
 
 ---
+
+# Tareas en Lenguas de Signos I. <br> Reconocimiento, Detección, Identificación y Segmentación.
+
+---
+
+## Reconocimiento.
+
+
+Tarea de reconocer los propios elementos discretos del lenguaje de signos, que incluye todo el proceso de seguimiento e identificación
+de los signos realizados y su conversión en palabras y expresiones semánticamente significativas.
+
+
+* <span style="color: rgb(163, 42, 42);">Métodos basados en visión por computador</span>: uso de una cámara y de técnicas procedentes del campo de <span style="color: rgb(163, 42, 42);">visión artificial</span>.
+
+* <span style="color: rgb(163, 42, 42);">Aproximaciones basadas en guantes y sensores</span>: uso de instrumentos y sensores específicos que ayudan en el proceso de reconocimiento de los signos.
+
+--- 
+
+## Reconocimiento. Métodos basados en visión por computador (VBA).
+
+*  <span style="color: rgb(163, 42, 42);">Vídeo</span> como fuente para el reconocimiento.
+
+*  Desarrollo de modelos y capacidad computacional en visión artificial en la última década: aprovechamiento de la <span style="color: rgb(163, 42, 42);">información temporal</span>.
+
+* En general, se preprocesan las imágenes adquiridas para obtener un vector de características y se clasifica según el modelo usado.
+
+<div style="display: grid; grid-template-columns: .5fr .5fr; margin-top: 20px;">
+    <div align="left"><video src="videos/VBA_1.mp4" style="width:80%" controls></video></div>
+	<div align="right"><video src="videos/VBA_2.mp4" style="width:80%" controls></video></div>
+</div>  
+<center>
+    <div><span style="font-style: italic; font-size: 20;"> Fuente: [Nicholas Renotte](https://www.youtube.com/watch?v=doDUihpj6ro) </span></div>
+</center>
+
+--- 
+
+## Reconocimiento. Aproximaciones basadas en guantes (GBA).
+
+* Captura de posición, orientación y ubicación de las manos con alta precisión.
+
+<center>
+    <div><video src="videos/GBA.mp4" style="width:55%" controls></video></div>
+    <div><span style="font-style: italic; font-size: 20;"> Fuente: [Tech Insider](https://www.youtube.com/watch?v=RHTrAXsULOI&ab_channel=TechInsider) </span></div>
+</center>
+
+--- 
+
+## Pros y contras.
+TODO: esta diapositiva es feísima
+<center>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow"></th>
+    <th class="tg-7btt">Pros</th>
+    <th class="tg-7btt">Contras</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-7btt" rowspan="3">VBA</td>
+    <td class="tg-0pky">Pocos recursos</td>
+    <td class="tg-0pky">Dependencia del entorno. Ej: iluminación</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Análisis completo de la información</td>
+    <td class="tg-0pky">Tiempo de procesamiento</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Problema de superposición de manos</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt" rowspan="3">GBA</td>
+    <td class="tg-0pky">Alta precisión</td>
+    <td class="tg-0pky">Inversión tecnológica y equipo</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Detección exclusiva de manos. Pérdida información gestual</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Coste elevado</td>
+  </tr>
+</tbody>
+</table>
+</center>
+
+---
+
+## Detección.
+
+Tarea de clasificación binaria de cualquier fotograma dado de un vídeo que verifica si una persona está utilizando
+lenguaje de signos o no.
+
+TODO
+
+--- 
+
+
+## Identificación.
+
+La tarea de identificación de lenguas de signos se define como la clasificación entre dos o más lenguas de signos.
+
+TODO
+
+--- 
+
+
+## Segmentación.
+
+Detección de los límites de los signos en un fotograma u oraciones para dividirlos en unidades lingüísticas con significado.
+
+TODO
+
+--- 
+
+## Reconocimiento aislado y continuo.
+
+TODO
+
+artículos para completar esta diapo: 
+
+https://link.springer.com/article/10.1007/s12652-021-03418-z
+https://ieeexplore.ieee.org/document/9090828
+https://link.springer.com/article/10.1007/s11042-019-7263-7#:~:text=In%20general%2C%20there%20are%20two,is%20referred%20as%20manual%20components.
+--- 
+
+# Tareas en Lenguas de Signos II. <br> Traducción.
+
+--- 
+
+## Traducción
+
+--- 
+
+# Tareas en Lenguas de Signos III. <br> Producción.
+
+--- 
+
+## Producción
+
+--- 
+
+# Inclusión de SLP en el marco NLP.
+
+--- 
+
+## Inclusión de SLP en el marco NLP
+
+--- 
+
+#  Estado del arte. <br> Modelos propuestos, Métricas y Datasets.
+
+--- 
+
+## Modelos propuestos
+
+--- 
+
+## Métricas utilizadas
+
+--- 
+
+## Datasets más frecuentes
+
+--- 
+
+# Futuro del SLP y conclusiones
+
+---
+
+## Más allá del lenguaje de signos
+
 
 
 
