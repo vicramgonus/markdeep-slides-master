@@ -307,19 +307,41 @@ Recursos disponibles:  <span style="color: rgb(163, 42, 42);">Diccionarios</span
 
 ---
 
-## Objetivos en SLP
+
+## Objetivos en SLP (I). Lo que tenemos...
 
     
-<div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: 50px;">
-    <img src="videos/goals1.gif"> 
-    <img src="videos/goals2.gif">
+<div style="display: flex; justify-content: center; align-items: center;">
+    <video src="videos/Goals1.mp4" style="width:80%" controls></video> 
 </div>  
 
-Un sistema traductor: Lenguaje signado \(\longleftrightarrow\) Lenguaje Oral involucra varias tareas: 
+---
 
-<center style="color: rgb(163, 42, 42);">
-Detección y reconocimiento, Traducción y Producción.
-</center>
+## Objetivos en SLP (II). ¿Sueño o realidad?
+<br>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+<div><center><img src="images/goal.png" width="80%"><br>[AR + SLP for Deaf People Education](https://www.semanticscholar.org/paper/Holographic-Signing-Avatars-for-Deaf-Education-Adamo-Villani-Anasingaraju/eddfd490d4f86d60ce32cdc7d2742aeb8a6e8f4b)</center></div>
+
+</div>  
+<br>
+
+---
+
+## Objetivos en SLP (II). ¿Sueño o realidad?
+<br>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+<div><center><img src="images/goal.png" width="80%"><br>[AR + SLP for Deaf People Education](https://www.semanticscholar.org/paper/Holographic-Signing-Avatars-for-Deaf-Education-Adamo-Villani-Anasingaraju/eddfd490d4f86d60ce32cdc7d2742aeb8a6e8f4b)</center></div>
+<div>
+    
+**¿Qué requeriría por parte de SLP?**
+
+* Reconocimiento del lenguaje.
+* Traducción Oral-Signado.
+* Generación con Avatares.
+
+</div>
+</div>  
+<br>
 
 
 ---
@@ -499,12 +521,7 @@ Forma de reducción dimensional que representa eficazmente las partes interesant
 
 * Las características extraídas de la región interesada se caracterizan por ser de color, textura, forma, etc.
 
-* Técnicas importantes usadas en SLR:
-	* Análisis de componentes principales (PCA).
-	* Descriptor de Fourier (FD).
-	* Histograma de gradiente orientado (HOG).
-	* Transformada de características invariantes de desplazamiento (SIFT).
-	* Característica robusta de aceleración (SURF).
+* Técnicas importantes usadas en SLR: PCA, FD, HOG, SIFT, SURF
 
 ---
 
@@ -774,8 +791,12 @@ Utilizando técnicas generativas de deep learning, con arquitecturas de redes ne
 variable auto-encoders (VAEs) y generative adversarial networks (GANs), se pueden dejar de lado algunos
 pasos de diseño y generar directamente un video.
 
-https://sign.mt/
-
+<center>
+<iframe style="width: 1200px; height: 600px;"
+    src="https://sign.mt/">
+</iframe>
+Fuente: [https://sign.mt/](https://sign.mt/)
+</center>
 --- 
 
 ## Datasets más frecuentes
@@ -925,10 +946,8 @@ palabra.
 En tareas tanto de traducción automática como de reconocimiento del habla, se calcula WER entre la
 frase generada por el sistema y una frase de referencia correcta.
 <img src="images/WER.PNG" alt="Fórmula WER"  class="center">
-    * S es el número de sustituciones,
-    * B es el número de borrados,
-    * I es el número de inserciones,
-    * N es el número de palabras que tiene la frase de referencia.
+
+S número de sustituciones, B número de borrados, I número de inserciones, N número de palabras de la frase de referencia.
 
 --- 
 
@@ -1096,67 +1115,6 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
 ## Conclusiones finales
 
 <center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">Xopre?</center>
-
----
-
-
-
-# Referencia markdeep-HTML-cositas
-
---- 
-
-## Anotaciones Xopre (básicas)
-
-Lista (y esto es texto normal):
-
-* <strong>Negrita con flechita</strong>
-
-<center style="color: rgb(163, 42, 42);">Rojo centrado</center>
-
-- Elemento de lista sin la flechita monísima
-
-    1. Elemento enumerado
-        - Enumerado? No
-    2. Elemento enumerado
-    - Elemento autoenumerado
-
-
---- 
-
-## Anotaciones Xopre (vídeo con controladores)
-
-<center>
-    <div><video src="videos/GBA.mp4" style="width:55%" controls></video></div>
-    <div><span style="font-style: italic; font-size: 20;"> Fuente: [Tech Insider](https://www.youtube.com/watch?v=RHTrAXsULOI&ab_channel=TechInsider) </span></div>
-</center>
-
---- 
-
-## Anotaciones Xopre (gifs)
-
-<center>
-    <div style="width:30%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="videos/cover.gif">
-		<div><span style="font-style: italic; font-size: 20;"> Fuente: [Sign language transformers](https://openaccess.thecvf.com/content_CVPR_2020/papers/Camgoz_Sign_Language_Transformers_Joint_End-to-End_Sign_Language_Recognition_and_Translation_CVPR_2020_paper.pdf) </span></div>
-    </div>
-</center>
-
-<!-- <div style="position: absolute; right: 50; top: 50; width: 25%;">
-    <img src="videos/cover.gif">
-</div> -->
-
---- 
-
-
-## Anotaciones Xopre (2 vídeos)
-
-<div style="display: grid; grid-template-columns: .5fr .5fr; margin-top: 20px;">
-    <div align="left"><video src="videos/goals1.gif" style="width:80%" controls></video></div>
-	<div align="right"><video src="videos/VBA_2.mp4" style="width:80%" controls></video></div>
-</div>  
-<center>
-    <div><span style="font-style: italic; font-size: 20;"> Fuente: [Nicholas Renotte](https://www.youtube.com/watch?v=doDUihpj6ro) </span></div>
-</center>
 
 ---
 
