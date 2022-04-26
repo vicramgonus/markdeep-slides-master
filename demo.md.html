@@ -684,19 +684,97 @@ Tarea que busca convertir glosa escrita en lenguaje natural escrito.
 
 --- 
 
-## Producción
+## Objetivo
+
+Lograr la traducción de un lenguaje fuente, ya sea en modalidad escrita, hablada o visual 
+(en caso de otros lenguajes de signos) a un flujo contínuo de lenguaje de signos en un nivel
+comparable al de un traductor humano.
+
+Existen diferentes técnicas, pero generalmente se reduce al uso de alguna representación humana
+a modo de un avatar. La forma de formar este avatar difiere, pudiendo generarse en base a
+animaciones predefinidas por glosa, accediendo directamente al esqueleto, o incluso la Generación
+completa del video sin utilizar un modelo 3D.
 
 --- 
 
-## Inclusión de SLP en el marco NLP
+## Retos
+
+Tanto el reconocimiento como la producción de signos deben enfrentar retos críticos. Uno de ellos es
+la variabilidad visual de los signos, la cual es dependiente de la forma de las manos, orientación de las
+palmas, movimiento, locación, expresiones faciales y otras señales no manuales.
+
+Otro reto es el desarrollo de un sistema de SLP fotorrealista para generar el signo, palabra u oración
+correspondientes en base a un texto o voz en lenguaje hablado dentro de una situación del mundo real.
+
+La traducción desde lenguaje hablado a lenguaje de señas tomando en cuenta las reglas gramaticales
+y estructuras linguísticas del SL es un problema muy complejo. No se trata de un problema de mapeo
+entre texto/voz a signos palabra por palabra, el problema surge de las diferencias entre la tokenización
+y el orden de las palabras en cada lenguaje.
 
 --- 
 
-#  Estado del arte. <br> Modelos propuestos, Métricas y Datasets.
+## Modalidades de Input
+
+* <span style="color: rgb(163, 42, 42);">Visión</span>
+En el caso de la visión, suelen utilizarse datos en formato RGB y esqueletos. 
+Los datos RGB pueden ser imágenes o videos en alta resolución.
+
+* <span style="color: rgb(163, 42, 42);">Linguística</span>
+Comúnmente texto. El texto es procesado usando diferentes modelos de reconocimiento.
+es fundamental especializar el sistema en un dominio en particular.
+Para no comenzar desde cero, se suele utilizar transfer learning.
+
 
 --- 
 
-## Modelos propuestos
+## Modelos Propuestos: Avatar
+
+* <span style="color: rgb(163, 42, 42);">Qué son</span>
+Técnica para mostrar una conversación de signos sin utilizar un humano, normalmente
+utilizando modelos 3D animados, los cuales se pueden almacenar de manera más eficiente que videos.
+Estos modelos pueden replicar el movimiento de los dedos, manos, gestos faciales y movimiento corporal.
+También se puede programar para ser utilizado en conjunto con diferentes lenguajes de signos
+
+* <span style="color: rgb(163, 42, 42);">Cómo producirlos</span>
+Para formar cada movimiento del avatar, es necesaria información de captura de movimiento y glosas
+parametrizadas.
+
+* <span style="color: rgb(163, 42, 42);">No son muy aceptados en la comunidad sorda</span>
+
+--- 
+
+## Modelos Propuestos: Motion Graph
+
+Motion Graph (MG) es un método de computación gráfica para animar personajes dinámicamente. 
+Se define como un grafo dirigido construido a base de datos de captura de movimiento.Motion Graph (MG) es un método de computación gráfica para animar personajes dinámicamente. Se define como un grafo dirigido construido a base de datos de captura de movimiento.
+
+Mediante un cálculo de la diferencia entre dos grafos o poses deseadas, se puede generar
+la transición del modelo entre ellas.
+
+--- 
+
+## Modelos Propuestos: NMT
+
+Las NMT son modelos que utilizan redes neuronales para predecir la probabilidad de una secuencia de palabras, 
+típicamente modelando oraciones completas en un modelo integrado.
+
+Principal ejemplo creado en base a esta técnica es Text2Sign.
+
+<center>
+<div style="width:40%; display: flex; flex-direction: column; justify-content: start;">
+    <img src="images/text2sign.jpg">
+</div>
+</center>
+
+--- 
+
+## Modelos Propuestos: Generación de Imagen/Video
+
+Utilizando técnicas generativas de deep learning, con arquitecturas de redes neuronales en forma de
+variable auto-encoders (VAEs) y generative adversarial networks (GANs), se pueden dejar de lado algunos
+pasos de diseño y generar directamente un video.
+
+https://sign.mt/
 
 --- 
 
