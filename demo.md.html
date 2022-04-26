@@ -780,64 +780,98 @@ https://sign.mt/
 
 ## Datasets más frecuentes
 
-Primeramente, debemos destacar la labor de Duarte et al. [42] con la creación del repositorio que
+Destacamos primeramente la labor de Duarte et al.: 
+<!-- con la creación del repositorio que
 usaremos como principal referencia, en el que podemos encontrar multitud de conjuntos de datos, así
 como las características de cada uno, tales como el idioma, el tamaño de los archivos, la disponibilidad...
 En definitiva, con este recurso contamos con una amplia biblioteca de conjuntos de datos útiles para
-el estudio del lenguaje de signos.
+el estudio del lenguaje de signos. -->
 
-<object type="text/html" data="https://how2sign.github.io/related_datasets.html" width="100" height="100"></object>
+<object type="text/html" data="https://how2sign.github.io/related_datasets.html" width="100%" height="70%"></object>
 
 --- 
 
 ## Datasets más frecuentes
 
 * <span style="color: rgb(163, 42, 42);">RWTH-PHOENIX-Weather 2014 (Continuous Sign Language Recognition Dataset)
-    y 2014 T (Parallel Corpus of Sign Language Video, Gloss and Translation).</span>
-    Diseñados por Koller et al. [43] y Camgöz et al. [44], estos conjuntos de datos se generaron a partir
-    de los noticieros del tiempo durante los años entre 2009 y 2011, diariamente y en alemán, en el
-    canal de televisión pública PHOENIX, con la interpretación del lenguaje de signos. Actualmente,
-    solo un número reducido de ediciones han sido transcritas usando glosa. Estas transcripciones
-    fueron escritas por nativos del GSL. Adicionalmente, el pronóstico del tiempo fue transcrito
-    de forma semiautomática recurriendo a un sistema de reconocimiento del lenguaje (RASR).
-    Adicionalmente, el conjunto de datos se completó añadiendo alemán hablado para capturar la
-    variabilidad en la traducción.
-    El signado se grabó mediante una cámara en frente de los intérpretes, vistiendo estos ropas negras
-    frente a un fondo artificial gris con transición de color.
-    Por su parte, el 2014 T incluye contenido adicional, más concretamente las anotaciones originales
-    de los ficheros en formato XML.
+    y 2014 T (Parallel Corpus of Sign Language Video, Gloss and Translation).</span> <br>
+    * Diseñados por Koller et al. y Camgöz et al. 
+    * Generados a partir de noticieros diarios entre 2009 y 2011.
+    * Lenguaje de signos alemán (GSL).
+    * Canal de televisión pública PHOENIX.
+    * Transcripción mixta, combinando automática (RASR) con trabajo de nativos del GSL.
+    * Completado con alemán hablado para capturar la variabilidad de la traducción. 
+    * 2014 T incluye anotaciones originales entre otro contenido.
 
 --- 
 
 ## Datasets más frecuentes
 
-* <span style="color: rgb(163, 42, 42);">AUTSL (A Large Scale Multi-Modal Turkish Sign Language Dataset and Baseline).</span>
-Diseñado por Sincan y Keles, este conjunto de datos presenta vídeos de lenguaje de signos
-turco (TSL) con el objetivo de proporcionar un punto de partida para futuras evaluaciones de
-modelos. El resultado cuenta con 226 signos interpretados por 43 signantes diferentes y un total
-de 38.336 muestras aisladas de signos, todos ellos con diferentes fondos, posiciones y posturas.
-Se incluye, además del RGB, la profundidad y la pose del esqueleto. Recurriendo a CNNs y
-LSTM fueron capaces de proporcionar los primeros resultados sobre el conjunto. Es reseñable ver
-que modelos diseñados por los autores lograron una precisión del 95 % aproximadamente en los
-conjuntos AUTSL y Montalbano, obteniendo sin embargo un 62.02 % en el propio AUTSL para
-una subselección realizada por un usuario independiente, mostrando de esta forma los nuevos
-retos que introdujo el conjunto de datos en el sector.
+<center>
+    <img src="images/2014PHOENIX.png" alt="" class="center">
+    <div><span style="font-style: italic; font-size: 20;">Ejemplo de contenido de PHOENIX 2014. Porcentajes según tiempo en pantalla.</span></div>
+</center>
+
+
+--- 
+
+## Datasets más frecuentes
+
+* <span style="color: rgb(163, 42, 42);">AUTSL (A Large Scale Multi-Modal Turkish Sign Language Dataset and Baseline).</span><br>
+    * Diseñado por Sincan y Keles.
+    * Lenguaje de signos turco (TSL).
+    * Objetivo: proporcionar un punto de partida desafiante.
+    * 226 signos interpretados por 43 signantes diferentes.
+    * 38.336 muestras aisladas de signos.
+    * Complejidad: diferentes fondos, posiciones y posturas.
+    * Información: RGB, profundidad y pose. 
+    * ~95% de precisión en AUTSL y Montalbano, pasando a ~60% en AUTSL para una subselección.
+
+--- 
+
+## Datasets más frecuentes
+
+<center>
+    <img src="images/autsl.PNG" style="height: 70%;" alt="" class="center">
+    <div><span style="font-style: italic; font-size: 20;">Información disponible en AUTSL.</span></div>
+</center>
+
+
+--- 
+
+<style>
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+</style>
+
+## Datasets más frecuentes
+
+<center>
+    <img src="images/Dataset_Fig1_backgrounds.jpg" class="center" alt="Ejemplos">
+    <div><span style="font-style: italic; font-size: 20;">Variación de intérpretes y fondos.</span></div>
+</center>
+
+
 
 --- 
 
 ## Datasets más frecuentes
 
 * <span style="color: rgb(163, 42, 42);">WLASL-2000 (Word-level Deep Sign Language Recognition from Video: A New
-    Large-scale Dataset and Methods Comparison).</span>
-    El conjunto de datos proporcionado en [45] es el mayor a nivel de palabras dentro del ASL,
-contando con 2.000 palabras diferentes comunes en dicho lenguaje. Los creadores diseñaron el
-conjunto con la esperanza de facilitar la investigación en el área de la comprensión del lenguaje
-de signos, buscando favorecer eventualmente la comunicación entre comunidades sordas y oyentes.
+    Large-scale Dataset and Methods Comparison).</span> <br>
+    * ASL.
+    * 2.000 palabras diferentes comunes.
+    * Facilitar investigación y facilitar comunicación sordos-oyentes.
 
-* <span style="color: rgb(163, 42, 42);">LSA64 (LSA64: A Dataset for Argentinian Sign Language).</span>
-Este conjunto cuenta con 3.200 vídeos en lenguaje de signos argentino (LSA), con 10 intérpretes
-no expertos ejecutan cada uno 5 repeticiones de 64 tipos de signos. Los signos fueron seleccionados
-de entre los más comúnmente utilizados en el léxico del LSA, incluyendo verbos y sustantivos
+* <span style="color: rgb(163, 42, 42);">LSA64 (LSA64: A Dataset for Argentinian Sign Language).</span><br>
+    * Lenguaje de signos argentino (LSA).
+    * 3.200 vídeos.
+    * 10 intérpretes no expertos ejecutan cada uno 5 repeticiones de 64 tipos de signos.
+    * Incluye verbos y sustantivos comunes
 
 --- 
 
@@ -873,6 +907,8 @@ de entre los más comúnmente utilizados en el léxico del LSA, incluyendo verbo
 
 ## Métricas utilizadas
 
+Destacamos ahora algunas de las métricas más comúnmente empleadas al tratar con lenguajes de signos, especialmente de cara a la traducción.
+
     * <span style="color: rgb(163, 42, 42);">WER, Word Error Rate</span>
     * <span style="color: rgb(163, 42, 42);">BLEU</span>
     * <span style="color: rgb(163, 42, 42);">ROUGE</span>
@@ -881,28 +917,33 @@ de entre los más comúnmente utilizados en el léxico del LSA, incluyendo verbo
 
 ## Métricas utilizadas: WER
 
-WER, Word Error Rate, es una medida comúnmente utilizada en la evaluación de sistemas de reconocimiento
-del habla o de traducción automática.
-Calcula el número mínimo de inserciones, borrados y sustituciones de una palabra por otra, necesarios
+<span style="color: rgb(163, 42, 42);">PENDIENTE</span>
+WER, Word Error Rate calcula el número mínimo de inserciones, borrados y sustituciones de una palabra por otra, necesarios
 para transformar una frase en otra. Esta medida se basa en la distancia de edición o distancia de
 Levenshtein, con la salvedad de que esta última se calcula a nivel de letra y WER lo hace a nivel de
 palabra.
 En tareas tanto de traducción automática como de reconocimiento del habla, se calcula WER entre la
 frase generada por el sistema y una frase de referencia correcta.
-<img src="images/WER.PNG" alt="Fórmula WER">
+<img src="images/WER.PNG" alt="Fórmula WER"  class="center">
     * S es el número de sustituciones,
     * B es el número de borrados,
     * I es el número de inserciones,
     * N es el número de palabras que tiene la frase de referencia.
-Word error rates WER measure string similarity based on word-level Levenshtein distance calculations
-[KP02]. A reference (ground truth) is compared to a hypothesis (system prediction) by calculating
-necessary operations, transforming a hypothesis into reference sentence. A common approach of calculating
-WER is described in equation 4.9.
+
+--- 
+
+## Métricas utilizadas: WER
+
+<center>
+    <img src="images/wer2.jpg" alt=""  class="center">
+    <div><span style="font-style: italic; font-size: 20;">Ejemplo de cálculo de la métrica WER.</span></div>
+</center>
 
 --- 
 
 ## Métricas utilizadas: BLEU-n
 
+<span style="color: rgb(163, 42, 42);">PENDIENTE</span>
 BLEU (Bilingual Evaluation Understudy) es un método de evaluación de la calidad de traducciones
 realizadas por sistemas de traducción automática. Una traducción tiene mayor calidad cuanto más
 similar es con respecto a otra de referencia, que se supone correcta. BLEU puede calcularse utilizando
@@ -912,37 +953,65 @@ BLEU se calcula normalmente a nivel de frases y halla la precisión en ngramas e
 sistema y la de referencia. Sin embargo, se utiliza una precisión modificada con el fin de solucionar
 ciertas deficiencias en la medida.
 
-BLEU, or the Bilingual Evaluation Understudy, is a score for comparing a candidate translation of
-text to one or more reference translations.
-Although developed for translation, it can be used to evaluate text generated for a suite of natural
-language processing tasks
+BLEU nos permite comparar una traducción candidata con una o más traducciones de referencia. A pesar 
+de haber sido diseñada para analizar traducciones, puede emplearse para evaluar texto sintético dentro
+de diversas tareas del procesamiento del lenguaje natural.
 
-<img src="images/BLEU.PNG" alt="Fórmula BLEU">
+---
 
-Habitualmente BLEU-4
+## Métricas utilizadas: BLEU-n
+Partimos de la precisión simple de n-gramas: <br>
+<img src="images/BLEU.PNG" alt="Fórmula preicisión"  class="center" height="210">
+
+Veamos un ejemplo: <br>
+<img src="images/BLEU_ejemplo.PNG" alt="Ejemplo de cálculo"  class="center">
+
+<!-- 4/6 y 3/6 en 1-gramas, 6/6 si todas fuesen the (!) -->
+--- 
+
+## Métricas utilizadas: BLEU-n
+En esencia BLEU ~ media geométrica de precisiones. <br> 
+<img src="images/BLEU_formula.PNG" alt="Fórmula BLEU"  class="center">
+donde PB es la precisión modificada penalizada por brevedad (considérese "the the" vs. la frase anterior).
+<!-- w_n pesos 1/N habitualmente, P la precisión -->
+
+
+---
+
+## Métricas utilizadas: ROUGE
+
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) difiere de la medida BLEU en tanto que mide la memoria, esto es, cuánto del documento de referencia el 
+sistema es capaz de recuperar o capturar. Se emplea habitualmente para medir la calidad de un resumen, así como en tareas de 
+traducción automática. Sin embargo, dado que mide la memoria es utilizada principalmente de cara a tareas de resumen, dado que resulta más importante evaluar en dichos casos el número de palabras que
+el modelo es capaz de recordar.
+<!-- ROUGE (Recall-Oriented Understudy for Gisting Evaluation) difiere de la medida BLEU en tanto que mide la memoria, esto es, cuánto del documento de referencia el 
+sistema es capaz de recuperar o capturar. Se emplea habitualmente para medir la calidad de un resumen, así como en tareas de 
+traducción automática. Sin embargo, dado que mide la memoria es utilizada principalmente de cara a tareas de resumen, dado que resulta más importante evaluar en dichos casos el número de palabras que
+el modelo es capaz de recordar. -->
 
 --- 
 
 ## Métricas utilizadas: ROUGE
 
-As opposed to the BLEU score, the Recall-Oriented Understudy for Gisting Evaluation (ROUGE)
-evaluation metric measures the recall. It’s typically used for evaluating the quality of generated text
-and in machine translation tasks — However, since it measures recall it’s mainly used in summarization
-tasks since it’s more important to evaluate the number of words the model can recall in these types of
-tasks.
-
-ROUGE, or Recall-Oriented Understudy for Gisting Evaluation,[1] is a set of metrics and a software package used for evaluating automatic summarization and machine translation software in natural language processing. The metrics compare an automatically produced summary or translation against a reference or a set of references (human-produced) summary or translation.
+<center>
+    <img src="images/ROUGE.png" alt="Ejemplo ROUGE-L" class="center">
+    <div><span style="font-style: italic; font-size: 20;">Muestra para calcular la métrica ROUGE.</span></div>
+</center>
 
 
-The following five evaluation metrics are available.
 
-    * ROUGE-N: Overlap of n-grams[2] between the system and reference summaries.
-        * ROUGE-1 refers to the overlap of unigram (each word) between the system and reference summaries.
-        * ROUGE-2 refers to the overlap of bigrams between the system and reference summaries.
-    * ROUGE-L: Longest Common Subsequence (LCS)[3] based statistics. Longest common subsequence problem takes into account sentence level structure similarity naturally and identifies longest co-occurring in sequence n-grams automatically.
-    * ROUGE-W: Weighted LCS-based statistics that favors consecutive LCSes .
-    * ROUGE-S: Skip-bigram[3] based co-occurrence statistics. Skip-bigram is any pair of words in their sentence order.
-    * ROUGE-SU: Skip-bigram plus unigram-based co-occurrence statistics.
+--- 
+
+## Métricas utilizadas: ROUGE
+
+Variaciones dentro de ROUGE, todas comparando el sistema con los documentos de referencia:
+    * ROUGE-N: Superposición de ngramas.
+        * ROUGE-1 contempla el solapamiento de los unigramas, esto es, las palabras individuales.
+        * ROUGE-2 trabaja con digramas.
+    * ROUGE-L: Recurre al concepto de Mayor Subsecuencia Común (LCS).
+    * ROUGE-W: Versión ponderada de ROUGE-L.
+    * ROUGE-S: Trabaja con digramas con salto, es decir, parejas de palabras respetando el orden.
+    * ROUGE-SU: Combina los digramas de salto con relaciones entre unigramas.
 
 --- 
 
