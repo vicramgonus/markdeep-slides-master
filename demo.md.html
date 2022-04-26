@@ -446,7 +446,6 @@ Detección de los límites de los signos en un fotograma u oraciones para dividi
     </div>
 </center>
 
-
 --- 
 
 ## Framework general.
@@ -465,6 +464,64 @@ El reconocimiento del lenguaje de signos consta de tres fases principales:
 
 ---
 
+## Procesamiento de características.
+
+Las técnicas de preprocesamiento se aplican a una imagen de entrada para eliminar el ruido no deseado y también mejorar la calidad.
+
+* <span style="color: rgb(163, 42, 42);">Técnicas de mejora</span>: ecualización del histograma (HE), la ecualización adaptativa del histograma (AHE), la ecualización adaptativa del histograma con contraste limitado (CLAHE) y la transformación logarítmica.
+
+* <span style="color: rgb(163, 42, 42);">Técnicas de restauración</span>: filtro mediano, el filtro medio, el filtro gaussiano, el filtro adaptativo y el filtro Wiener.
+
+---
+
+## Procesamiento de características. Segmentación de imagen
+
+Proceso de dividir una imagen en regiones significativas llamadas segmentos.
+
+* <span style="color: rgb(163, 42, 42);">Contextual</span>: relaciones entre las características de la imagen, como los bordes, las intensidades similares y la proximidad espacial.
+
+* <span style="color: rgb(163, 42, 42);">No contextual</span>: ignora relaciones espaciales. Agrupa los píxeles basándose en el valor de los atributos globales.
+
+
+<center>
+    <div style="width:44%; display: flex; flex-direction: column; justify-content: start;">
+        <img src="images/seg_imag.png">
+    </div>
+</center>
+
+---
+
+## Procesamiento de características. Extracción de características.
+
+Forma de reducción dimensional que representa eficazmente las partes interesantes de una imagen.
+
+* Se extrae un vector de características compacto eliminando una parte irrelevante para aumentar la precisión del aprendizaje y mejorar la visibilidad del resultado.
+
+* Las características extraídas de la región interesada se caracterizan por ser de color, textura, forma, etc.
+
+* Técnicas importantes usadas en SLR:
+	* Análisis de componentes principales (PCA).
+	* Descriptor de Fourier (FD).
+	* Histograma de gradiente orientado (HOG).
+	* Transformada de características invariantes de desplazamiento (SIFT).
+	* Característica robusta de aceleración (SURF).
+
+---
+
+## Clasificación y predicción.
+
+Las técnicas de inteligencia artificial utilizadas para el reconocimiento del lenguaje de signos incluyen el supervisado y el no supervisado.
+
+* Predictores inteligentes más utilizados para el reconocimiento del lenguaje de signos:
+	* Vecino más cercano (KNN).
+	* Red neuronal artificial (ANN).
+	* Supported Vector Machine (SVM).
+	* Modelo de Markov oculto (HMM). 
+	* Red neuronal convolucional (CNN),
+	* Lógica difusa.
+
+---
+
 ## Traducción
 
 La RAE lo define como: Acción y efecto de expresar en una lengua lo que está escrito o se ha expresado antes en otra.
@@ -479,10 +536,14 @@ La RAE lo define como: Acción y efecto de expresar en una lengua lo que está e
 </center>
 
 ---
+
 ## Traducción automática (MT)
+
     * Invisibilización de la importancia del lenguaje de signos.
     * Planteamiento muy diferente al habitual, pues trabajamos con vídeos en lugar de con audio o texto escrito.
+	
 Actualmente los modelos que mejores resultados obtienen provienen de técnicas hibrídas entre los dos campos de gran desarrollo actualmente : Visión y PLN. **¡ÉSTE ES EL FUTURO DEL CAMPO!**
+
 <center>
     <div style="width:40%; display: flex; flex-direction: column; justify-content: start;">
         <img src="images/translation2.png">
