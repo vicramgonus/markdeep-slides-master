@@ -491,9 +491,201 @@ Actualmente los modelos que mejores resultados obtienen provienen de técnicas h
 
 ## Traducción
 
-<center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">Xopre</center>
+Define la Real Academia Española la traducción como la “Acción y efecto de traducir”, siendo a su
+vez la definición de traducir mucho más reveladora: “Expresar en una lengua lo que está escrito o se
+ha expresado antes en otra”. De esta forma, trabajando con los lenguajes de signos, consideramos esta
+tarea como la conversión del lenguajes de signos interpretados a otros lenguajes, no necesariamente de
+signos.
+Dentro del campo de la traducción nos encontramos con la traducción automática (MT), que busca
+una forma automatizada de convertir un lenguaje natural en otro, conservando el significado de la
+entrada, y generando una salida coherente y adecuada en el idioma de salida. Aunque la MT sea uno
+de los sectores de investigación más antiguos dentro de la inteligencia artificial, el paso a técnicas a
 
 --- 
+
+## Traducción
+
+gran escala ha permitido percibir una mejora significativa en la calidad de la traducción. Sin embargo,
+esta evolución no ha quedado tan presente al centrarnos en la traducción de lenguajes de signos (SLT),
+debido en parte a, como ya comentamos en la sección 1, la invisibilización de su importancia.
+Dado que hablamos de traducción nos centramos en los diferentes lenguajes de los que se puede partir
+y a los cuales, igualmente, se puede llegar mediante el proceso de traducción. Más concretamente, en el
+caso que nos atañe esta tarea resulta atípica, como comentamos anteriormente, pues no trabajamos con
+sonidos y texto, sino con vídeo y texto, de forma tal que es necesario llevar a cabo un planteamiento
+diferente al más comúnmente utilizado.
+Dividiremos a continuación el contenido según el tipo de traducción de la que estemos hablando,
+siendo flexibles en lo que se refiere al concepto de traducción, pues si bien consideraremos la opción
+"glosa a texto", realmente la glosa como tal no puede considerarse un lenguaje teniendo en cuenta las
+consideraciones habituales sobre idiomas
+
+--- 
+
+## Traducción: glosa a texto
+
+Esta es la tarea llamada habitualmente traducción del lenguaje de signos, una labor ubicada dentro del procesamiento del lenguaje natural que busca convertir glosa escrita en lenguaje natural escrito. Con frecuencia, estos textos difieren tanto en la terminología como en la estructura de la frase, que puede ser radicalmente distinta. Un ejemplo de esto podría ser la inversión Sujeto-Verbo-Objeto (SVO), pasando a ser Objeto-Sujeto-Verbo (OSV), como es el caso del ASL, en el que este cambio estructural es frecuente [24].
+
+    * <span style="color: rgb(163, 42, 42);">Cihan Camgöz et al.</span>
+    Estos autores experimentaron con diferentes arquitecturas del aprendizaje automático, comparando Faltan las referencias el uso de memorias de largo corto plazo (LSTM) con el de unidades recurrentes cerradas (GRU) de cara a un modelo recurrente, al igual que con el modelo de atención de Luong (Luong, Pham y Manning 2015) en comparación con el de Bahdanau (Bahdanau, Cho y Bengio 2015), recurriendo además a diferentes tamaños de lotes. Concluyeron que en el conjunto de datos RWTH-PHOENIX-Weather-2014T (ver sección 6) la combinación dada por GRUs, la atención de Luong y un tamaño por lotes de 1 superaba a las otras configuraciones.
+    * <span style="color: rgb(163, 42, 42);">Yin y Read.</span>
+    Siguiendo los avances en materia de traducción automática del lenguaje hablado, propusieron cambiar la red neuronal con un transformador (Vaswani et al. 2017), mostrando mejoras tanto en el conjunto RWTH-PHOENIX-Weather-2014T, en lenguaje de signos alemán, como en el ASLG-PC12, en ASL.
+
+--
+
+## Traducción: texto a glosa
+
+    * <span style="color: rgb(163, 42, 42);">Zhao et al.</span>
+    Estos autores recurrieron a un sistema basado en la Gramática de Árboles Añadidos (TAG)
+con el objetivo de traducir frases en inglés a ASL. Al tiempo que se leía el texto en inglés se
+formaba un árbol de glosas para el ASL, recurriendo a TAGs Síncronos (Shieber y Schabes 1990;
+Shieber 1994), emparejando los árboles elementales del ASL con los árboles elementales del inglés,
+aceptando a continuación sustituciones y combinaciones de nodos. Aunque los TAGs síncronos
+se hayan utilizado previamente en tareas de traducción de lenguajes hablados (Abeillé, Schabes
+y Joshi 1991), esta es la primera ocasión en la que se pudo ver aplicado a un lenguaje signado.
+
+    * <span style="color: rgb(163, 42, 42);">Othman y Jemni.</span>
+    En 2012 estos investigadores identificaron la necesidad existente de un corpus paralelo de glosa y
+    texto de una dimensiones elevadas. Diseñaron por ello una gramática con el objetivo de convertir
+frases en inglés del Proyecto Gutenberg a glosa del ASL. El corpus generado contenía 100 millones
+de frases sintéticas, y 800 millones de palabras, siendo el mayor corpus inglés-ASL hasta la fecha.
+Desgraciadamente, es difícil medir la calidad del corpus, dado que no se llegó a evaluar el método
+de producción en parejas reales inglés-ASL, y solo una parte muy reducida del corpus se encuentra
+disponible online.
+
+
+---
+
+## Traducción: vídeo a texto
+
+    * <span style="color: rgb(163, 42, 42);">Camgöz et al.</span>
+    propusieron una arquitectura única para realizar esta tarea, pudiendo utilizar Referencias
+tanto glosa como texto simultáneamente. Recurriendo a embebidos preentrenados de Koller et
+al. con la idea de codificar cada frame independientemente, recurriendo a un transformador.
+En este proceso de codificación recurrieron a una CTC (Clasificación Temporal Conexionista)
+(Graves et al. 2006) para clasificar la glosa del lenguaje de signos. Usando la misma codificación,
+emplearon un transformador para decodificar el lenguaje hablado, de token en token. Probaron
+que al supervisar la glosa el modelo mejoraba frente a otras aproximaciones anteriores.
+
+---
+
+## Traducción: vídeo a texto
+
+    * <span style="color: rgb(163, 42, 42);">Camgöz et al.</span>
+    nuevamente proponen una nueva arquitectura que no pide la supervisión de la
+glosa, llamada “Transformadores Multicanal para la Traducción del Lenguaje de Signo Multiarticulado”.
+En este caso, recortando la mano y la cara del signante y recurriendo a una estimación tridimensional
+mediante un transformador, son capaces de obtener 3 canales diferentes de datos. A continuación
+codifican cada canal de forma separada con un transformador, para seguidamente codificar todos
+los canales juntos, concatenando los diferentes canales en cada frame. Como en su trabajo anterior,
+recurren a transformadores para decodificar el texto del lenguaje hablado, solo que esta vez sin
+la necesidad de supervisión adicional. En su lugar, se añaden dos anclajes de pérdida (anchoring
+losses) con el objetivo de predecir la posición de la mano y la forma de la boca en cada frame de
+forma independiente, gracias en parte a las anotaciones disponibles a partir del trabajo de Koller
+et al. en 2019. Concluyen que este trabajo es tan eficaz como las anteriores aproximacinoes, y
+de esta forma logran romper la dependencia de la costosa glosa como información necesaria para
+traducir vídeo en texto.
+
+---
+
+## Traducción: vídeo a pose
+
+    * <span style="color: rgb(163, 42, 42);">OpenPose</span>
+    Este proyecto [28, 29, 30, 31] es el primer sistema capaz de reconocer, conjuntamente, las
+posiciones clave de los cuerpos, caras, manos y pies, con un total de 135 ubicaciones en 2D
+en cada imagen. Mientras el modelo puede estimar la pose directamente a partir de una única
+inferencia, sugieren igualmente una organización en la que primeramente se estima la pose del
+cuerpo, para a continuación, independientemente, estimar la pose de las manos y de la cara,
+recurriendo a recortes (crops) de alta resolución de las áreas. Con este proceder los autores de
+[32] proponen una única red neuronal, más rápida y precisa de cara a la obtención de las posiciones
+clave. Adicionalmente, OpenPose es capaz de triangular otras posiciones clave dados diferentes
+ángulos de grabación, siendo capaz de reconstruir la pose en 3D.
+<div style="width:30%; display: flex; flex-direction: column; justify-content: start;">
+    <img src="videos/sample_gif.gif">
+    <div><span style="font-style: italic; font-size: 20;"> Fuente: [Sign language transformers](https://openaccess.thecvf.com/content_CVPR_2020/papers/Camgoz_Sign_Language_Transformers_Joint_End-to-End_Sign_Language_Recognition_and_Translation_CVPR_2020_paper.pdf) </span></div>
+</div>
+
+---
+
+## Traducción: vídeo a pose
+
+    * <span style="color: rgb(163, 42, 42);">DensePose</span>
+    Güler et al. [33] recurren a una aproximación diferente, sustituyendo la clasificación de cada
+    posición clave por una segmentación semántica, clasificando cada píxel según la parte del cuerpo
+    a la que parece pertenecer. Seguidamente, para cada píxel, conociendo la parte del cuerpo a la
+    que pertenece, se predice si dicho píxel puede ubicarse en una proyección 2D del modelo. Esta
+    aproximación da lugar a la reconstrucción a cuerpo completo, facilitando el muestreo de cara a
+    la localización de posiciones clave, de forma semejante a OpenPose.
+    Sin embargo, las poses humanas bidimensionales pueden no ser suficiente para entender completamente
+    la posición y la orientación de los puntos de referencia en el espacio, y el aplicar estimación de la
+    pose frame a frame no tiene en cuenta la información temporal del movimiento, especialmente en
+    los casos en los que contamos con movimientos rápidos, que contienen habitualmente secciones
+    desdibujadas (blur).
+    <div style="width:30%; display: flex; flex-direction: column; justify-content: start;">
+        <img src="videos/sample_gif.gif">
+        <div><span style="font-style: italic; font-size: 20;"> Fuente: [Sign language transformers](https://openaccess.thecvf.com/content_CVPR_2020/papers/Camgoz_Sign_Language_Transformers_Joint_End-to-End_Sign_Language_Recognition_and_Translation_CVPR_2020_paper.pdf) </span></div>
+    </div>
+
+---
+
+## Traducción: vídeo a pose
+
+    * <span style="color: rgb(163, 42, 42);">MediaPipe Holistic.</span>
+    Grishchenko y Bazarevsky [34] intentan en 2020 resolver de forma directa el problema de la
+estimación de la pose 3D tomando una aproximación semejante a la de OpenPose, contando con
+una organización capaz de estimar el cuerpo y luego la cara y las manos. Difiere de OpenPose
+en tanto que las poses estimadas eran tridimensionales, y el estimador era capaz de ejecutarse a
+tiempo real en una CPU, pudiendo emplearse por lo tanto esta tecnología en dispositivos móviles.
+A día de hoy, esta herramienta de estimación de pose está disponible y es ampliamente utilizada
+en Android, iOS, C++, Python y para sitios web con Javascript.
+    <div style="width:30%; display: flex; flex-direction: column; justify-content: start;">
+        <img src="videos/sample_gif.gif">
+        <div><span style="font-style: italic; font-size: 20;"> Fuente: [Sign language transformers](https://openaccess.thecvf.com/content_CVPR_2020/papers/Camgoz_Sign_Language_Transformers_Joint_End-to-End_Sign_Language_Recognition_and_Translation_CVPR_2020_paper.pdf) </span></div>
+    </div>
+
+---
+
+## Traducción: estado del arte
+
+    * <span style="color: rgb(163, 42, 42);">VAC (Visual Alignment Constraint for Continuous Sign Language Recognition).</span>
+    El modelo propuesto por Hao et al. en [25] busca retomar la estructura de entramiento iterativo
+de los últimos trabajos realizados en el Reconocimiento del Lenguaje de Signos Continuo (CSLR),
+con la idea de compensar uno de los problemas encontrados hasta la fecha siguiendo dicha
+estrategia, a saber: el sobreajuste durante el entrenamiento del modelo. El principal añadido
+de este modelo es la mejora del extractor de características recurriendo a supervisión alineada.
+Más concretamente, el modelo se forma combinando dos funciones de pérdida, una centrada
+en características visuales, y otra dedicada para el módulo de alineación. Al comprobar el
+comportamiento del modelo con conjuntos de datos habituales del CSLR comprobaron que,
+efectivamente, VAC podía obtener unos resultados competitivos.
+<img src="images/vac.PNG">
+
+---
+
+## Traducción: estado del arte
+
+    * <span style="color: rgb(163, 42, 42);">TSPNet (Hierarchical Feature Learning via Temporal Semantic Pyramid for Sign Language Translation).</span>
+    Diseñado por Li et al. [26], este modelo busca traducir secuencias de vídeo en frases de lenguaje
+    natural por escrito. La principal innovación del modelo es que consideran información temporal
+    como añadido de cara al entrenamiento, cuestión que en muchos casos es descartada al trabajar
+únicamente frame a frame. Más concretamente, este proceder reduce la necesidad de una segmentación
+precisa. Recurriendo ahora a una estructura piramidal y a métodos de atención son capaces de
+mejorar los resultados hasta la fecha tanto con BLEU como con ROUGE.
+<img src="images/TSPNet.png">
+
+---
+
+## Traducción: estado del arte
+
+    * <span style="color: rgb(163, 42, 42);">SAM-SLR (Skeleton Aware Multi-modal Sign Language Recognition).</span>
+    Teniendo en cuenta la complejidad y la rapidez de los movimientos realizados por una persona
+signando, Jiang et al. [27] optaron por centrar la atención del modelo en el reconocimiento del
+esqueleto del intérprete, si bien se trataba de un área relativamente poco investigada, existiendo
+por ello pocas anotaciones sobre las marcas clave en las manos. Con el uso de estimadores de la
+pose fueron capaces de extraer correctamente las posiciones principales de las manos, pudiendo
+de esta forma reconocer más adecuadamente el lenguaje de signos. Concretamente, recurriendo
+a redes convolucionales, lograron mejorar los resultados previos para los casos de vídeos RGB y
+RGBD, esto es, incluyendo también la profundidad.
+<img src="images/sam_slr.jpg">
+
+---
 
 # Tareas en Lenguas de Signos III. <br> Producción.
 
@@ -513,27 +705,178 @@ Actualmente los modelos que mejores resultados obtienen provienen de técnicas h
 
 ## Modelos propuestos
 
-<center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">Xopre?</center>
+--- 
+
+## Datasets más frecuentes
+
+Primeramente, debemos destacar la labor de Duarte et al. [42] con la creación del repositorio que
+usaremos como principal referencia, en el que podemos encontrar multitud de conjuntos de datos, así
+como las características de cada uno, tales como el idioma, el tamaño de los archivos, la disponibilidad...
+En definitiva, con este recurso contamos con una amplia biblioteca de conjuntos de datos útiles para
+el estudio del lenguaje de signos.
+
+<object type="text/html" data="https://how2sign.github.io/related_datasets.html" width="100" height="100"></object>
+
+--- 
+
+## Datasets más frecuentes
+
+* <span style="color: rgb(163, 42, 42);">RWTH-PHOENIX-Weather 2014 (Continuous Sign Language Recognition Dataset)
+    y 2014 T (Parallel Corpus of Sign Language Video, Gloss and Translation).</span>
+    Diseñados por Koller et al. [43] y Camgöz et al. [44], estos conjuntos de datos se generaron a partir
+    de los noticieros del tiempo durante los años entre 2009 y 2011, diariamente y en alemán, en el
+    canal de televisión pública PHOENIX, con la interpretación del lenguaje de signos. Actualmente,
+    solo un número reducido de ediciones han sido transcritas usando glosa. Estas transcripciones
+    fueron escritas por nativos del GSL. Adicionalmente, el pronóstico del tiempo fue transcrito
+    de forma semiautomática recurriendo a un sistema de reconocimiento del lenguaje (RASR).
+    Adicionalmente, el conjunto de datos se completó añadiendo alemán hablado para capturar la
+    variabilidad en la traducción.
+    El signado se grabó mediante una cámara en frente de los intérpretes, vistiendo estos ropas negras
+    frente a un fondo artificial gris con transición de color.
+    Por su parte, el 2014 T incluye contenido adicional, más concretamente las anotaciones originales
+    de los ficheros en formato XML.
+
+--- 
+
+## Datasets más frecuentes
+
+* <span style="color: rgb(163, 42, 42);">AUTSL (A Large Scale Multi-Modal Turkish Sign Language Dataset and Baseline).</span>
+Diseñado por Sincan y Keles, este conjunto de datos presenta vídeos de lenguaje de signos
+turco (TSL) con el objetivo de proporcionar un punto de partida para futuras evaluaciones de
+modelos. El resultado cuenta con 226 signos interpretados por 43 signantes diferentes y un total
+de 38.336 muestras aisladas de signos, todos ellos con diferentes fondos, posiciones y posturas.
+Se incluye, además del RGB, la profundidad y la pose del esqueleto. Recurriendo a CNNs y
+LSTM fueron capaces de proporcionar los primeros resultados sobre el conjunto. Es reseñable ver
+que modelos diseñados por los autores lograron una precisión del 95 % aproximadamente en los
+conjuntos AUTSL y Montalbano, obteniendo sin embargo un 62.02 % en el propio AUTSL para
+una subselección realizada por un usuario independiente, mostrando de esta forma los nuevos
+retos que introdujo el conjunto de datos en el sector.
+
+--- 
+
+## Datasets más frecuentes
+
+* <span style="color: rgb(163, 42, 42);">WLASL-2000 (Word-level Deep Sign Language Recognition from Video: A New
+    Large-scale Dataset and Methods Comparison).</span>
+    El conjunto de datos proporcionado en [45] es el mayor a nivel de palabras dentro del ASL,
+contando con 2.000 palabras diferentes comunes en dicho lenguaje. Los creadores diseñaron el
+conjunto con la esperanza de facilitar la investigación en el área de la comprensión del lenguaje
+de signos, buscando favorecer eventualmente la comunicación entre comunidades sordas y oyentes.
+
+* <span style="color: rgb(163, 42, 42);">LSA64 (LSA64: A Dataset for Argentinian Sign Language).</span>
+Este conjunto cuenta con 3.200 vídeos en lenguaje de signos argentino (LSA), con 10 intérpretes
+no expertos ejecutan cada uno 5 repeticiones de 64 tipos de signos. Los signos fueron seleccionados
+de entre los más comúnmente utilizados en el léxico del LSA, incluyendo verbos y sustantivos
+
+--- 
+
+## Datasets más frecuentes: problemáticas
+
+    * <span style="color: rgb(163, 42, 42);">Escasez</span>
+
+--- 
+
+## Datasets más frecuentes: problemáticas
+
+    * <span style="color: rgb(163, 42, 42);">Escasez</span>
+    * <span style="color: rgb(163, 42, 42);">Incompletitud</span>
+
+--- 
+
+## Datasets más frecuentes: problemáticas
+
+    * <span style="color: rgb(163, 42, 42);">Escasez</span>
+    * <span style="color: rgb(163, 42, 42);">Incompletitud</span>
+    * <span style="color: rgb(163, 42, 42);">Incompatibilidad</span>
+
+--- 
+
+## Datasets más frecuentes: problemáticas
+
+    * <span style="color: rgb(163, 42, 42);">Escasez</span>
+    * <span style="color: rgb(163, 42, 42);">Incompletitud</span>
+    * <span style="color: rgb(163, 42, 42);">Incompatibilidad</span>
+    * <span style="color: rgb(163, 42, 42);">Anonimato</span>
 
 --- 
 
 ## Métricas utilizadas
 
-<center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">Xopre</center>
+    * <span style="color: rgb(163, 42, 42);">WER, Word Error Rate</span>
+    * <span style="color: rgb(163, 42, 42);">BLEU</span>
+    * <span style="color: rgb(163, 42, 42);">ROUGE</span>
 
 --- 
 
+## Métricas utilizadas: WER
 
-## Datasets más frecuentes
+WER, Word Error Rate, es una medida comúnmente utilizada en la evaluación de sistemas de reconocimiento
+del habla o de traducción automática.
+Calcula el número mínimo de inserciones, borrados y sustituciones de una palabra por otra, necesarios
+para transformar una frase en otra. Esta medida se basa en la distancia de edición o distancia de
+Levenshtein, con la salvedad de que esta última se calcula a nivel de letra y WER lo hace a nivel de
+palabra.
+En tareas tanto de traducción automática como de reconocimiento del habla, se calcula WER entre la
+frase generada por el sistema y una frase de referencia correcta.
+<img src="images/WER.PNG" alt="Fórmula WER">
+    * S es el número de sustituciones,
+    * B es el número de borrados,
+    * I es el número de inserciones,
+    * N es el número de palabras que tiene la frase de referencia.
+Word error rates WER measure string similarity based on word-level Levenshtein distance calculations
+[KP02]. A reference (ground truth) is compared to a hypothesis (system prediction) by calculating
+necessary operations, transforming a hypothesis into reference sentence. A common approach of calculating
+WER is described in equation 4.9.
 
-<center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">Xopre</center>
+--- 
+
+## Métricas utilizadas: BLEU-n
+
+BLEU (Bilingual Evaluation Understudy) es un método de evaluación de la calidad de traducciones
+realizadas por sistemas de traducción automática. Una traducción tiene mayor calidad cuanto más
+similar es con respecto a otra de referencia, que se supone correcta. BLEU puede calcularse utilizando
+más de una traducción de referencia. Esto permite una mayor robustez a la medida frente a traducciones
+libres realizadas por humanos.
+BLEU se calcula normalmente a nivel de frases y halla la precisión en ngramas entre la traducción del
+sistema y la de referencia. Sin embargo, se utiliza una precisión modificada con el fin de solucionar
+ciertas deficiencias en la medida.
+
+BLEU, or the Bilingual Evaluation Understudy, is a score for comparing a candidate translation of
+text to one or more reference translations.
+Although developed for translation, it can be used to evaluate text generated for a suite of natural
+language processing tasks
+
+<img src="images/BLEU.PNG" alt="Fórmula BLEU">
+
+Habitualmente BLEU-4
+
+--- 
+
+## Métricas utilizadas: ROUGE
+
+As opposed to the BLEU score, the Recall-Oriented Understudy for Gisting Evaluation (ROUGE)
+evaluation metric measures the recall. It’s typically used for evaluating the quality of generated text
+and in machine translation tasks — However, since it measures recall it’s mainly used in summarization
+tasks since it’s more important to evaluate the number of words the model can recall in these types of
+tasks.
+
+ROUGE, or Recall-Oriented Understudy for Gisting Evaluation,[1] is a set of metrics and a software package used for evaluating automatic summarization and machine translation software in natural language processing. The metrics compare an automatically produced summary or translation against a reference or a set of references (human-produced) summary or translation.
+
+
+The following five evaluation metrics are available.
+
+    * ROUGE-N: Overlap of n-grams[2] between the system and reference summaries.
+        * ROUGE-1 refers to the overlap of unigram (each word) between the system and reference summaries.
+        * ROUGE-2 refers to the overlap of bigrams between the system and reference summaries.
+    * ROUGE-L: Longest Common Subsequence (LCS)[3] based statistics. Longest common subsequence problem takes into account sentence level structure similarity naturally and identifies longest co-occurring in sequence n-grams automatically.
+    * ROUGE-W: Weighted LCS-based statistics that favors consecutive LCSes .
+    * ROUGE-S: Skip-bigram[3] based co-occurrence statistics. Skip-bigram is any pair of words in their sentence order.
+    * ROUGE-SU: Skip-bigram plus unigram-based co-occurrence statistics.
 
 --- 
 
 
 # Futuro del SLP y conclusiones
-
-<center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">Xopre?</center>
 
 ---
 
@@ -611,6 +954,8 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
 --- 
 
 ## Conclusiones finales
+
+<center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">Xopre?</center>
 
 ---
 
