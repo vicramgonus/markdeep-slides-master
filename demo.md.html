@@ -66,10 +66,10 @@
 <div>
 
 4. Datasets y Métricas de evaluación
-    - Punto1
-    - Punto2
-    - Punto3
-    - etc.
+    - How2Sign
+    - PHOENIX2014, AUTSL, WLASL, LSA64
+    - Problemáticas
+    - WER, BLEU, ROUGE
 
 </div>
 <div style="display: grid; grid-template-columns: 1fr 1fr; "></div>
@@ -938,49 +938,52 @@ Destacamos ahora algunas de las métricas más comúnmente empleadas al tratar c
 
 ## Métricas utilizadas: WER
 
-<span style="color: rgb(163, 42, 42);">PENDIENTE</span>
-WER, Word Error Rate calcula el número mínimo de inserciones, borrados y sustituciones de una palabra por otra, necesarios
+WER, Word Error Rate considera el número mínimo de inserciones, borrados y sustituciones de una palabra por otra, necesarios
 para transformar una frase en otra. Esta medida se basa en la distancia de edición o distancia de
-Levenshtein, con la salvedad de que esta última se calcula a nivel de letra y WER lo hace a nivel de
-palabra.
-En tareas tanto de traducción automática como de reconocimiento del habla, se calcula WER entre la
-frase generada por el sistema y una frase de referencia correcta.
+Levenshtein, pasando del nivel de letra al de palabra. <br>
+Es empleada principalmente en reconocimiento y traducción automáticos, comparando una frase sintética con una de referencia correcta.
+
+--- 
+
+## Métricas utilizadas: WER
+
 <img src="images/WER.PNG" alt="Fórmula WER"  class="center">
 
+<<<<<<< Updated upstream
 S número de sustituciones, B número de borrados, I número de inserciones, N número de palabras de la frase de referencia.
+=======
+    * S es el número de sustituciones,
+    * B es el número de borrados,
+    * I es el número de inserciones,
+    * N es el número de palabras que tiene la frase de referencia.
+>>>>>>> Stashed changes
 
 --- 
 
 ## Métricas utilizadas: WER
 
 <center>
-    <img src="images/wer2.jpg" alt=""  class="center">
-    <div><span style="font-style: italic; font-size: 20;">Ejemplo de cálculo de la métrica WER.</span></div>
+    <img src="images/WER2.jpg" class="center">
+    <div><span style="font-style: italic; font-size: 20;">Ejemplo para calcular la métrica WER.</span></div>
 </center>
 
 --- 
 
 ## Métricas utilizadas: BLEU-n
 
-<span style="color: rgb(163, 42, 42);">PENDIENTE</span>
 BLEU (Bilingual Evaluation Understudy) es un método de evaluación de la calidad de traducciones
-realizadas por sistemas de traducción automática. Una traducción tiene mayor calidad cuanto más
-similar es con respecto a otra de referencia, que se supone correcta. BLEU puede calcularse utilizando
-más de una traducción de referencia. Esto permite una mayor robustez a la medida frente a traducciones
-libres realizadas por humanos.
-BLEU se calcula normalmente a nivel de frases y halla la precisión en ngramas entre la traducción del
-sistema y la de referencia. Sin embargo, se utiliza una precisión modificada con el fin de solucionar
-ciertas deficiencias en la medida.
-
-BLEU nos permite comparar una traducción candidata con una o más traducciones de referencia. A pesar 
-de haber sido diseñada para analizar traducciones, puede emplearse para evaluar texto sintético dentro
-de diversas tareas del procesamiento del lenguaje natural.
+realizadas por sistemas de traducción automática. 
+    * Mide la calidad al comparar la semejanza con una frase de referencia, supuesta correcta. 
+    * Admite varias frases de referencia al mismo tiempo. 
+    <!-- Traducciones libres humanas -->
+    * Adaptación de la precisión en n-gramas.
+    * Diseñada para analizar traducciones, pero ampliable para evaluar texto sintético.
 
 ---
 
 ## Métricas utilizadas: BLEU-n
 Partimos de la precisión simple de n-gramas: <br>
-<img src="images/BLEU.PNG" alt="Fórmula preicisión"  class="center" height="210">
+<img src="images/BLEU.PNG" alt="Fórmula precisión" class="center">
 
 Veamos un ejemplo: <br>
 <img src="images/BLEU_ejemplo.PNG" alt="Ejemplo de cálculo"  class="center">
@@ -999,10 +1002,12 @@ donde PB es la precisión modificada penalizada por brevedad (considérese "the 
 
 ## Métricas utilizadas: ROUGE
 
-ROUGE (Recall-Oriented Understudy for Gisting Evaluation) difiere de la medida BLEU en tanto que mide la memoria, esto es, cuánto del documento de referencia el 
-sistema es capaz de recuperar o capturar. Se emplea habitualmente para medir la calidad de un resumen, así como en tareas de 
-traducción automática. Sin embargo, dado que mide la memoria es utilizada principalmente de cara a tareas de resumen, dado que resulta más importante evaluar en dichos casos el número de palabras que
-el modelo es capaz de recordar.
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) difiere de la medida BLEU en la memoria:
+<center style="color: rgb(163, 42, 42); font-family: 'Lucida Console', 'Courier New', monospace;">cuánto del documento de referencia el sistema es capaz de recuperar o capturar</center> 
+
+    * Empleado habitualmente para medir la calidad de un resumen y en traducción automática.
+    * Especialmente útil con resúmenes, donde es más importante evaluar en dichos casos el número de palabras que el modelo es capaz de recordar.
+
 <!-- ROUGE (Recall-Oriented Understudy for Gisting Evaluation) difiere de la medida BLEU en tanto que mide la memoria, esto es, cuánto del documento de referencia el 
 sistema es capaz de recuperar o capturar. Se emplea habitualmente para medir la calidad de un resumen, así como en tareas de 
 traducción automática. Sin embargo, dado que mide la memoria es utilizada principalmente de cara a tareas de resumen, dado que resulta más importante evaluar en dichos casos el número de palabras que
@@ -1109,6 +1114,7 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
 * <span style="color: rgb(163, 42, 42);">alineación</span>: ¿cómo relacionar las unidades de la lengua de signos con las de la lengua hablada?
 * <span style="color: rgb(163, 42, 42);">co-aprendizaje</span>: ¿cómo aprovechar el conocimiento de la lengua hablada en la lengua de signos?
 
+<<<<<<< Updated upstream
 
 --- 
 
@@ -1118,6 +1124,10 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
 
 ---
 
+=======
+--- 
+
+>>>>>>> Stashed changes
 
 
 <center style="margin-top: 350px;">
