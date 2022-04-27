@@ -15,6 +15,10 @@
     --vh: 1vh;  /* ...scroll bars, via js in order to fix #23 */
 }
 
+*:not(center){
+    text-align: justify !important;
+}
+
 @page {
     size: 640px 360px;  /* for a 16:9 aspect ratio; may be overridden via js */
     margin: 0;

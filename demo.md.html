@@ -1,4 +1,4 @@
-<meta charset="utf-8" lang="en">
+<meta charset="utf-8" lang="es">
 
 
 <center style="margin-top: 350px;">
@@ -11,7 +11,7 @@
 </div>
 
 <center style="margin-top: 200px;">
-<span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio B. Gallardo, J. Antonio Rodríguez, Julián M. Galindo, Víctor Ramos</span><br>
+<span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio Bustamante, Julián M. Galindo, Víctor Ramos, J. Antonio Rodríguez</span><br>
 </center>
 
 <center style="margin-top: 100px;">
@@ -27,58 +27,51 @@
 
 ## Overview
 
-<div style="display: flex; justify-content: center; align-items: center;"><video src="videos/Initial.mp4" style="width:90%" controls></video></div>
+<div style="display: flex; justify-content: center; align-items: center;"><video src="videos/InitialDef.mp4" style="width:85%" controls></video></div>
 
 ---
 
 
-## Overview
+# Agenda
 
-<div style="display: grid; grid-template-columns: 1fr 1fr;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
 <div>
 
-1. Fundamentos de la Lengua de Signos.
-    - Aspectos generales y motivación
-    - Algunos aspectos lingüísticos
-    - Métodos de Representación
+**1. Fundamentos**
 
 </div>
 <div>
 
-2. Reconocimiento y traducción
-    - Tecnologías y modos.
-    - Detección
-    - Identificación y Clasificación
-    - Traducción
+**2. Reconocimiento**
 
-</div>
-</div>
-<div style="display: grid; grid-template-columns: 1fr 1fr;">
-<div>
-
-3. Producción 
-    - Punto1
-    - Punto2
-    - Punto3
-    - etc.
 
 </div>
 <div>
 
-4. Datasets y Métricas de evaluación
-    - How2Sign
-    - PHOENIX2014, AUTSL, WLASL, LSA64
-    - Problemáticas
-    - WER, BLEU, ROUGE
-
+**3. Traducción** 
+    
+    
 </div>
-<div style="display: grid; grid-template-columns: 1fr 1fr; "></div>
-<div style="grid-column-start: 2;">
-
-5. El futuro de SLR junto a NLP. Conclusiones
-
 </div>
 
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+    <div>
+    
+    **4. Producción**
+    
+    </div>
+    <div>
+    
+    **5. Datasets y métricas**
+    
+    
+    </div>
+    <div>
+    
+    **6. SLP en el marco NLP** 
+        
+        
+    </div>
 </div>
 
 
@@ -108,19 +101,6 @@
 </div>
 
 <strong>Realidad</strong>: [Lista de lenguas de signos (Wikipedia)](https://en.wikipedia.org/wiki/List_of_sign_languages)
-
----
-
-## Aspectos generales de las lenguas signadas (II). Mitos (II)
-
-* Las lenguas de signos son traducciones letra a letra de cada una de las palabras de un idioma
-
-<div style="display: flex; justify-content: space-around; height: 45%;">
-    <img src="images/aslLetters.jpg"> <img src="images/aslWords.jpeg">
-</div>
-
-
-<strong>Realidad</strong>: Las lenguas de signos son lenguajes naturales completos, que involucran el uso de los gestos, las manos, el cuerpo y el entorno de los signantes. 
 
 ---
 
@@ -1107,8 +1087,36 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
 <span style="font-weight: bold;"> Puntos clave:</span>
 
 * <span style="color: rgb(163, 42, 42);">Traducción</span>: ¿cómo pasar la información visual-gestual a/desde la información oral-textual?
-* <span style="color: rgb(163, 42, 42);">alineación</span>: ¿cómo relacionar las unidades de la lengua de signos con las de la lengua hablada?
-* <span style="color: rgb(163, 42, 42);">co-aprendizaje</span>: ¿cómo aprovechar el conocimiento de la lengua hablada en la lengua de signos?
+* <span style="color: rgb(163, 42, 42);">Alineación</span>: ¿cómo relacionar las unidades de la lengua de signos con las de la lengua hablada?
+* <span style="color: rgb(163, 42, 42);">Co=Aprendizaje</span>: ¿cómo aprovechar el conocimiento de la lengua hablada en la lengua de signos?
+
+---
+
+# Conclusiones
+
+--- 
+
+* El lenguaje de signos es el método de comunicación principal para las personas sordas, por ello es relevante garantizar la inclusión tecnológica y social se desarrollen las tecnologías necesarias. 
+
+* Lingüísticamente, los lenguajes de signos,  como lenguajes naturales, cuentan con muchas similitudes con los lenguajes orales, aunque mediante el uso del visual e incorporando particularidades propias de los lenguajes: Simultaneidad, Referencias, Deletreo, etc.
+
+* El procesamiento del Lenguaje de Signos inmiscuye tres aspectos principales:
+    - <span style="color: rgb(163, 42, 42);">Reconocimiento</span>: con múltiples tecnologías y enfoques destacando el papel del DeepLearning tanto en CSLR (2D y 3D) como en ISLR que, a pesar de ser la aproximación más popular, no es la más adecuada.
+    - <span style="color: rgb(163, 42, 42);">Traducción</span>: el core central del procesamiento, en el que se entrelazan dos de los principales ámbitos de la IA actual: el Procesamiento del Lenguaje Natural y la Visión por Computador. Aunque con importantes avances, se necesita de una mayor cooperación y interés investigador para el desarrollo de este ámbito.
+
+---
+
+* El procesamiento del Lenguaje de Signos inmiscuye tres aspectos principales: 
+    - <span style="color: rgb(163, 42, 42);">Generación</span>: adoptan avatares 3D y arquitecturas de generación de video. Sin embargo, hasta el momento se requerían de generación manual, difícil y costosa. Sin embargo los avances recientes en este ámbito, el auge de AR-VR auguran importantes avances en los próximos años.
+
+* Aunque existen diferentes conjuntos de datos, la excasez de los mismos, su reducido tamaño, las grandes limitaciones de uso y las grandes variaciones en los contenidos de los mismos (glosas, videos, alineación de textos, ...), y la anonimización, dificultan las tareas de aprendizaje. 
+
+* Lineas futuras: Fusión de información multicanal, aprendizaje de patrones espacio-temporales (GNN), aumento del conocimiento específico del dominio, lidiar con la excasez de datos. Y sobre todo:
+
+<center style="color: rgb(163, 42, 42);">
+    ESTUDIOS MULTIDISCIPLINARES Y COOPERACIÓN
+</center>
+
 
 ---
 
@@ -1122,7 +1130,7 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
     </center>
     
     <center style="margin-top: 200px;">
-    <span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio B. Gallardo, J. Antonio Rodríguez, Julián M. Galindo, Víctor Ramos</span><br>
+    <span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio B. Apellido, J. Antonio Rodríguez, Julián M. Apellido, Víctor Ramos</span><br>
     </center>
     
     <center style="margin-top: 100px;">
