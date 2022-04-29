@@ -11,7 +11,7 @@
 </div>
 
 <center style="margin-top: 200px;">
-<span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio Bustamante, Julián M. Galindo, Víctor Ramos, J. Antonio Rodríguez</span><br>
+<span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio Bustamante, Julián M. Galindo, Víctor Ramos, J. Antonio Rodríguez </span><br>
 </center>
 
 <center style="margin-top: 100px;">
@@ -190,7 +190,7 @@ Las lenguas de signos constan de una estructura lingüística completa que cumpl
 
 * <span style="color: rgb(163, 42, 42);">Fonología/Morfología</span>: concreta las unidades mínimas e incluye gestos manuales y no manuales, movimientos, ... y también el <span style="color: rgb(163, 42, 42);">Deletreo con los dedos</span>
 
-* <span style="color: rgb(163, 42, 42);">Sintáxis</span>: En cada lengua de signos la sintáxis puede variar o incluso tener varias estructuras correctas. Especial relevancia : <span style="color: rgb(163, 42, 42);">Simultaneidad</span>
+* <span style="color: rgb(163, 42, 42);">Sintaxis</span>: En cada lengua de signos la Sintaxis puede variar o incluso tener varias estructuras correctas. Especial relevancia : <span style="color: rgb(163, 42, 42);">Simultaneidad</span>
 
 <center>
 <div style="width:90%; display: grid; grid-template-columns: 1fr 1fr;">
@@ -211,8 +211,8 @@ Las lenguas de signos constan de una estructura lingüística completa que cumpl
 
 
 <center>
-    <div><video src="videos/vokoscreen-2022-04-24_17-44-43.mp4" style="width:55%" controls></video></div>
-    <div><span style="font-style: italic; font-size: 20;"> Fuente: [ASL Conversation](https://www.youtube.com/watch?v=Ckccp6z_kbo) </span></div>
+    <video src="videos/vokoscreen-2022-04-24_17-44-43.mp4" style="width:55%" controls></video><br>
+    <span style="font-style: italic; font-size: 20;"> Fuente: [ASL Conversation](https://www.youtube.com/watch?v=Ckccp6z_kbo) </span>
 </center>
 
 <center>
@@ -351,12 +351,12 @@ de los signos realizados y su conversión en palabras y expresiones semánticame
 
 * En general, se preprocesan las imágenes adquiridas para obtener un vector de características y se clasifica según el modelo usado.
 
-<div style="display: grid; grid-template-columns: .5fr .5fr; margin-top: 20px;">
+<center>
+<div style="display: flex; justify-content: space-around; margin-top: 20px;">
     <div align="left"><video src="videos/VBA_1.mp4" style="width:80%" controls></video></div>
 	<div align="right"><video src="videos/VBA_2.mp4" style="width:80%" controls></video></div>
 </div>  
-<center>
-    <div><span style="font-style: italic; font-size: 20;"> Fuente: [Nicholas Renotte](https://www.youtube.com/watch?v=doDUihpj6ro) </span></div>
+   <span style="font-style: italic; font-size: 20;"> Fuente: [Nicholas Renotte](https://www.youtube.com/watch?v=doDUihpj6ro) </span>
 </center>
 
 --- 
@@ -366,8 +366,8 @@ de los signos realizados y su conversión en palabras y expresiones semánticame
 * Captura de posición, orientación y ubicación de las manos con alta precisión.
 
 <center>
-    <div><video src="videos/GBA.mp4" style="width:55%" controls></video></div>
-    <div><span style="font-style: italic; font-size: 20;"> Fuente: [Tech Insider](https://www.youtube.com/watch?v=RHTrAXsULOI&ab_channel=TechInsider) </span></div>
+    <video src="videos/GBA.mp4" style="width:55%" controls></video><br>
+    <span style="font-style: italic; font-size: 20;"> Fuente: [Tech Insider](https://www.youtube.com/watch?v=RHTrAXsULOI&ab_channel=TechInsider) </span>
 </center>
 
 --- 
@@ -378,7 +378,7 @@ Actualmente la mayoría de los modelos de reconocimiento se dedican al reconocim
 
 * Pérdida del contexto, especialmente grave en el tratamiento de las Referencias
 * Problemas de análisis temporal diferenciación de signos por movimiento: Oclusión, Tracking, ... 
-* Dificultad en el empleo de técnicas basadas en lenguaje en vez de en visión 
+* Dificultad en la integración de datos multimodal con los datos de  visión 
 
 Nuevas líneas: <span style="color: rgb(163, 42, 42);">Análisis continuo</span>. Con gran influencia de técnicas de <u>análisis temporal</u>: Hidden Markov Models (HMM), Dynamic Time Wrapping, Conditional Random Fields (CRF), Support Vector Machines (SVM), Deep Learning (3D-CNN-LSTM, ...)
 
@@ -389,18 +389,16 @@ Nuevas líneas: <span style="color: rgb(163, 42, 42);">Análisis continuo</span>
 Tarea de clasificación binaria de cualquier fotograma dado de un vídeo que verifica si una persona está utilizando
 lenguaje de signos o no.
 
-* <span style="color: rgb(163, 42, 42);">Borg y Camilleri. 2019</span>: Procesamiento de los fotogramas en bruto basado en redes convolucionales.
+* <span style="color: rgb(163, 42, 42);">Modelos/Paquetes</span> para la detección en SLP: OpenPose, DensePose, MediaPipe Holistic.
 
-* <span style="color: rgb(163, 42, 42);">Moryossef et al. 2020</span>: Detección a partir de la pose estimada y no del fotograma en bruto.
 
-<center>
-<div style=" width: 75%; display: flex; flex-direction: row; justify-content: center;">
+<center style="margin-bottom: -20px; margin-top: -20px;">
+<div style=" width: 100%; display: flex; flex-direction: row; justify-content: center;">
     <img src="images/detection_2.png" style="width:45%"> 
     <img src="images/detection_1.png" style="width:42%"> 
 </div> 
 </center>
 
-Problema: <span style="color: rgb(163, 42, 42);">Insuficientes datasets correctamente anotados para evaluación de datos reales.</span>
 
 
 --- 
@@ -458,10 +456,8 @@ El reconocimiento del lenguaje de signos consta de tres fases principales:
 * Clasificación. 
 
 <center>
-    <div style="width:58%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="images/general_framework.png">
-		<div><span style="font-style: italic; font-size: 20;"> Fuente: Subhash Chand Agrawal et al. 2016 </span></div>
-    </div>
+        <img style="width: 60%;" src="images/general_framework.png"><br>
+		<span style="font-style: italic; font-size: 20;"> Fuente: Subhash Chand Agrawal et al. 2016 </span>
 </center>
 
 ---
@@ -517,6 +513,18 @@ Las técnicas de inteligencia artificial utilizadas para el reconocimiento del l
 	* Red neuronal convolucional (CNN),
 	* Lógica difusa.
 
+--- 
+    
+## Reconocimiento. Ejemplo
+
+<center>
+<iframe style="width: 80%; height: 60%;" src="https://fingerspelling.xyz/chooseLevel">
+</iframe><br>
+<span style="font-style: italic; font-size: 20;"> Fuente: <a href="https://fingerspelling.xyz" target="_blank">Fingerspelling</a></span>
+</center>
+
+
+
 ---
 
 ## Traducción
@@ -526,10 +534,8 @@ La RAE lo define como: Acción y efecto de expresar en una lengua lo que está e
     * En el contexto SLP: tarea de conversión del lenguajes de signos interpretados a otros lenguajes, no necesariamente de signos.
 	
 <center>
-    <div style="width:50%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="images/translation.png">
-		<div><span style="font-style: italic; font-size: 20;"> Fuente: [https://sign-language-processing.github.io/](Sign Language Processing) </span></div>
-    </div>
+        <img style="width: 50%;" src="images/translation.png"><br>
+		<span style="font-style: italic; font-size: 20;"> Fuente: [https://sign-language-processing.github.io/](Sign Language Processing) </span>
 </center>
 
 ---
@@ -542,109 +548,8 @@ La RAE lo define como: Acción y efecto de expresar en una lengua lo que está e
 Actualmente los modelos que mejores resultados obtienen provienen de técnicas hibrídas entre los dos campos de gran desarrollo actualmente : Visión y PLN. **¡ÉSTE ES EL FUTURO DEL CAMPO!**
 
 <center>
-    <div style="width:40%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="images/translation2.png">
-		<div><span style="font-style: italic; font-size: 20;"> Fuente: [Sign language transformers](https://openaccess.thecvf.com/content_CVPR_2020/papers/Camgoz_Sign_Language_Transformers_Joint_End-to-End_Sign_Language_Recognition_and_Translation_CVPR_2020_paper.pdf) </span></div>
-    </div>
-</center>
-
---- 
-
-## Traducción: glosa a texto
-
-Tarea que busca convertir glosa escrita en lenguaje natural escrito.
-
-	* Difieren tanto en la terminología como en la estructura.
-	* Ejemplo en ASL: inversión Sujeto-Verbo-Objeto (SVO), pasando a ser Objeto-Sujeto-Verbo (OSV).
-
-<center>
-    <table>
-        <tr>
-          <th>Glosa</th>
-          <th></th>
-          <th>Texto</th>
-       </tr>
-        <tr>
-          <td>PRONOMBRE-2 SABER SIGNAR</td>
-          <td>    →    </td>
-          <td>¿Sabes hablar lenguaje de signos?</td>
-        </tr>
-      </table>     
-</center>
-
-    * <span style="color: rgb(163, 42, 42);">Cihan Camgöz et al. 2018</span>  Comparan arquitercutas LTSM (Long short-term memory) y GRU (gated recurrent unit) junto con mecanismos de atención.
-    * <span style="color: rgb(163, 42, 42);">Yin y Read. 2020</span> Siguiendo los avances en materia de traducción automática del lenguaje hablado, propusieron cambiar la red neuronal con un transformador mostrando mejoras con respecto a trabajos previos tanto en lenguaje de signos alemán, como en el ASL.
-
---- 
-
-## Traducción: texto a glosa
-
-* <span style="color: rgb(163, 42, 42);">Zhao et al. 2000</span> Sistema basado en gramáticas de adjunción de árboles (TAG) para traducir frases en inglés a ASL. 
-	* Se genera un árbol de glosas para el ASL.
-	* Empareja los árboles elementales del ASL con los árboles elementales del inglés.
-	* Se realizan sustituciones y combinaciones de nodos.
-	* Primera ocasión en la que se pudo ver TAG aplicado a un lenguaje de signos.
-
-* <span style="color: rgb(163, 42, 42);">Othman y Jemni. 2012</span> Identificaron la necesidad existente de un corpus paralelo de glosa y texto de una dimensiones elevadas. Diseñaron una gramática con el objetivo de convertir frases en inglés a glosa del ASL. 
-	* 100 millones de frases sintéticas.
-	* 800 millones de palabras.
-	* Difícil medir la calidad del corpus, dado que no se llegó a evaluar el método de producción en parejas reales inglés-ASL.
-
----
-
-## Traducción: vídeo a texto
-
-* <span style="color: rgb(163, 42, 42);">Camgöz et al. 2020b</span>
-	* Proponen arquitectura basada en transformadores que codifican cada fotograma.
-	* Usa referencias tanto de glosas como de texto.
-	* Usan un trasformador para decodificar el lenguaje hablado.
-
-* <span style="color: rgb(163, 42, 42);">Camgöz et al. 2020a</span>
-	* Arquitectura que no depende de las glosas.
-	* Recorta la mano y cara del signante y estiman la pose 3D mediante transformadores.
-
----
-
-
-## Traducción: vídeo a pose
-
-* <span style="color: rgb(163, 42, 42);">OpenPose</span> Primer sistema capaz de reconocer, conjuntamente, las posiciones clave de los cuerpos, caras, manos y pies.
-	* 135 ubicaciones en 2D en cada imagen. 
-	* Puede estimar la pose directamente a partir de una única inferencia. 
-	* Se estima la pose del cuerpo e independientemente de las manos y de la cara.
-	* Capaz de triangular otras posiciones clave dados diferentes ángulos de grabación, siendo capaz de reconstruir la pose en 3D.
-
-* <span style="color: rgb(163, 42, 42);">DensePose</span>
-	* Sustituyen la clasificación de cada posición clave por una segmentación semántica según la parte del cuerpo.
-	* Predice si dicho píxel puede ubicarse en una proyección 2D del modelo. 
-	* Reconstrucción a cuerpo completo.
-	* No tiene en cuenta la información temporal del movimiento. Problema con el desenfoque (blur).
-
----
-
-## Traducción: vídeo a pose
-
-* <span style="color: rgb(163, 42, 42);">MediaPipe Holistic.</span>
-	* Aproximación semejante a la de OpenPose.
-	* Poses estimadas eran tridimensionales.	
-	* Capaz de ejecutarse a tiempo real en una CPU.
-	* Disponible para Android, iOS, C++, Pythony es ampliamente utilizada.
-<center>
-    <div style="width:40%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="images/holistic.gif">
-        <div><span style="font-style: italic; font-size: 20;"> Fuente: Holistic </span></div>
-    </div>
-</center>
-
----
-
-## Traducción: estado del arte
-
-* <span style="color: rgb(163, 42, 42);">VAC (Visual Alignment Constraint for Continuous Sign Language Recognition).</span>
-	* Dos funciones de pérdida, una centrada en características visuales, y otra dedicada para el módulo de alineación.
-<center>
-    <div style="width:60%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="images/vac.png">
+        <img style="width: 40%;" src="images/translation2.png"><br>
+		<span style="font-style: italic; font-size: 20;"> Fuente: [Sign language transformers](https://openaccess.thecvf.com/content_CVPR_2020/papers/Camgoz_Sign_Language_Transformers_Joint_End-to-End_Sign_Language_Recognition_and_Translation_CVPR_2020_paper.pdf) </span>
     </div>
 </center>
 
@@ -655,23 +560,8 @@ Tarea que busca convertir glosa escrita en lenguaje natural escrito.
 * <span style="color: rgb(163, 42, 42);">TSPNet (Hierarchical Feature Learning via Temporal Semantic Pyramid for Sign Language Translation).</span>
     * Consideran información temporal como añadido de cara al entrenamiento frente tratamiento frame a frame.
 <center>
-    <div style="width:80%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="images/TSPNet.png">
-    </div>
-</center>
-
-
----
-
-## Traducción: estado del arte
-
-* <span style="color: rgb(163, 42, 42);">SAM-SLR (Skeleton Aware Multi-modal Sign Language Recognition).</span>
-    * Se centra en la complejidad y la rapidez de los movimientos realizados por una persona signando.
-	* Redes convolucionales para extraer las posiciones principales de las manos. 
-<center>
-    <div style="width:50%; display: flex; flex-direction: column; justify-content: start;">
-        <img src="images/sam_slr.jpg">
-    </div>
+    <img style="width:80%;" src="images/TSPNet.png"><br>    
+    <span style="font-style: italic; font-size: 20;"> Fuente: [TSPNet](https://proceedings.neurips.cc//paper/2020/file/8c00dee24c9878fea090ed070b44f1ab-Paper.pdf) </span>
 </center>
 
 
@@ -684,7 +574,7 @@ Tarea que busca convertir glosa escrita en lenguaje natural escrito.
 ## Objetivo
 
 Lograr la traducción de un lenguaje fuente, ya sea en modalidad escrita, hablada o visual 
-(en caso de otros lenguajes de signos) a un flujo contínuo de lenguaje de signos en un nivel
+(en caso de otros lenguajes de signos) a un flujo continuo de lenguaje de signos en un nivel
 comparable al de un traductor humano.
 
 Existen diferentes técnicas, pero generalmente se reduce al uso de alguna representación humana
@@ -704,7 +594,7 @@ Otro reto es el desarrollo de un sistema de SLP fotorrealista para generar el si
 correspondientes en base a un texto o voz en lenguaje hablado dentro de una situación del mundo real.
 
 La traducción desde lenguaje hablado a lenguaje de señas tomando en cuenta las reglas gramaticales
-y estructuras linguísticas del SL es un problema muy complejo. No se trata de un problema de mapeo
+y estructuras lingüísticas del SL es un problema muy complejo. No se trata de un problema de mapeo
 entre texto/voz a signos palabra por palabra, el problema surge de las diferencias entre la tokenización
 y el orden de las palabras en cada lenguaje.
 
@@ -748,6 +638,12 @@ Se define como un grafo dirigido construido a base de datos de captura de movimi
 Mediante un cálculo de la diferencia entre dos grafos o poses deseadas, se puede generar
 la transición del modelo entre ellas.
 
+<center>
+    <span style="font-style: italic; font-size: 20;">
+        Fuente: [figshare](https://figshare.com/articles/media/Signing_avatar_ratings/16877131/2?file=31206256)</span><br>
+    <img style="width:58%;" src="images/motionGraph.jpg">
+    </center>
+
 --- 
 
 ## Modelos Propuestos: NMT
@@ -758,9 +654,8 @@ típicamente modelando oraciones completas en un modelo integrado.
 Principal ejemplo creado en base a esta técnica es Text2Sign.
 
 <center>
-<div style="width:40%; display: flex; flex-direction: column; justify-content: start;">
-    <img src="images/text2sign.jpg">
-</div>
+    <img style="width:50%;" src="images/text2sign.png"><br>
+    <span style="font-style: italic; font-size: 20;"> Fuente: [Text2Sign](https://link.springer.com/article/10.1007/s11263-019-01281-2) </span>
 </center>
 
 --- 
@@ -772,12 +667,14 @@ variable auto-encoders (VAEs) y generative adversarial networks (GANs), se puede
 pasos de diseño y generar directamente un video.
 
 <center>
-<iframe style="width: 1200px; height: 600px;"
-    src="https://sign.mt/">
-</iframe>
-Fuente: [https://sign.mt/](https://sign.mt/)
+    <div style="display: flex; justify-content: center; align-items: center; width: 60%"><video src="videos/producion.mp4" style="width:85%" controls></video></div>
 </center>
+
 --- 
+
+# Datasets más frecuentes y Métricas
+
+---
 
 ## Datasets más frecuentes
 
@@ -809,10 +706,9 @@ el estudio del lenguaje de signos. -->
 ## Datasets más frecuentes
 
 <center>
-    <img src="images/2014PHOENIX.png" alt="" class="center">
-    <div><span style="font-style: italic; font-size: 20;">Ejemplo de contenido de PHOENIX 2014. Porcentajes según tiempo en pantalla.</span></div>
+    <img style="width:50%;" src="images/2014PHOENIX.png"><br>
+    <span style="font-style: italic; font-size: 20;">Ejemplo de contenido de PHOENIX 2014. Porcentajes según tiempo en pantalla.</span>
 </center>
-
 
 --- 
 
@@ -833,10 +729,9 @@ el estudio del lenguaje de signos. -->
 ## Datasets más frecuentes
 
 <center>
-    <img src="images/autsl.PNG" style="height: 70%;" alt="" class="center">
-    <div><span style="font-style: italic; font-size: 20;">Información disponible en AUTSL.</span></div>
+    <img style="width:50%;" src="images/autsl.PNG"><br>
+    <span style="font-style: italic; font-size: 20;">Información disponible en AUTSL.</span>
 </center>
-
 
 --- 
 
@@ -852,8 +747,8 @@ el estudio del lenguaje de signos. -->
 ## Datasets más frecuentes
 
 <center>
-    <img src="images/Dataset_Fig1_backgrounds.jpg" class="center" alt="Ejemplos">
-    <div><span style="font-style: italic; font-size: 20;">Variación de intérpretes y fondos.</span></div>
+    <img src="images/Dataset_Fig1_backgrounds.jpg" class="center" alt="Ejemplos"><br>
+    <span style="font-style: italic; font-size: 20;">Variación de intérpretes y fondos.</span>
 </center>
 
 
@@ -876,33 +771,45 @@ el estudio del lenguaje de signos. -->
 
 --- 
 
-## Datasets más frecuentes: problemáticas
+## Datasets: problemáticas
 
     * <span style="color: rgb(163, 42, 42);">Escasez</span>
+    
+    <object type="text/html" data="https://how2sign.github.io/related_datasets.html" width="100%" height="70%"></object>
 
 --- 
 
-## Datasets más frecuentes: problemáticas
+## Datasets: problemáticas
 
-    * <span style="color: rgb(163, 42, 42);">Escasez</span>
     * <span style="color: rgb(163, 42, 42);">Incompletitud</span>
+
+    <center>
+        <img style="width=50%;" src="images/Contenido.PNG" class="center" alt="Ejemplos"><br>
+        <span style="font-style: italic; font-size: 20;">Contenido de ASLLVD, MS-ASL, Purdue RVL-SLLL, WLASL y ASL-LEX.</span>
+    </center>
+
 
 --- 
 
-## Datasets más frecuentes: problemáticas
+## Datasets: problemáticas
 
-    * <span style="color: rgb(163, 42, 42);">Escasez</span>
-    * <span style="color: rgb(163, 42, 42);">Incompletitud</span>
     * <span style="color: rgb(163, 42, 42);">Incompatibilidad</span>
 
---- 
+    <center>
+        <img style="width=50%;" src="images/SOV.png" class="center" alt="Ejemplos">
+        <span style="font-style: italic; font-size: 20;">Porcentaje de idiomas según ordenación.</span>
+    </center>
 
-## Datasets más frecuentes: problemáticas
+---
 
-    * <span style="color: rgb(163, 42, 42);">Escasez</span>
-    * <span style="color: rgb(163, 42, 42);">Incompletitud</span>
-    * <span style="color: rgb(163, 42, 42);">Incompatibilidad</span>
-    * <span style="color: rgb(163, 42, 42);">Anonimato</span>
+## Datasets: problemáticas
+
+    * <span style="color: rgb(163, 42, 42);">Anonimización</span>
+
+    <center>
+        <img style="width=50%;" src="images/strawberry.jpg" class="center" alt="Ejemplos">
+        <span style="font-style: italic; font-size: 20;">Ejemplo de anonimización conservando información facial.</span>
+    </center>
 
 --- 
 
@@ -926,24 +833,25 @@ Es empleada principalmente en reconocimiento y traducción automáticos, compara
 --- 
 
 ## Métricas utilizadas: WER
+<center>
+    <img stlye="width: 10%;" src="images/WER.PNG" alt="Fórmula WER">
+    <img style="width: 50%;" src="images/WER2.PNG"><br>
+    <span style="font-style: italic; font-size: 20;">Ejemplo para calcular la métrica WER.</span>    
+</center>
 
-<img src="images/WER.PNG" alt="Fórmula WER"  class="center">
 
     * S es el número de sustituciones,
     * B es el número de borrados,
     * I es el número de inserciones,
     * N es el número de palabras que tiene la frase de referencia.
 
---- 
-
-## Métricas utilizadas: WER
 
 <center>
-    <img src="images/WER2.jpg" class="center">
-    <div><span style="font-style: italic; font-size: 20;">Ejemplo para calcular la métrica WER.</span></div>
+    
 </center>
 
 --- 
+
 
 ## Métricas utilizadas: BLEU-n
 
@@ -993,17 +901,6 @@ el modelo es capaz de recordar. -->
 
 ## Métricas utilizadas: ROUGE
 
-<center>
-    <img src="images/ROUGE.png" alt="Ejemplo ROUGE-L" class="center">
-    <div><span style="font-style: italic; font-size: 20;">Muestra para calcular la métrica ROUGE.</span></div>
-</center>
-
-
-
---- 
-
-## Métricas utilizadas: ROUGE
-
 Variaciones dentro de ROUGE, todas comparando el sistema con los documentos de referencia:
     * ROUGE-N: Superposición de ngramas.
         * ROUGE-1 contempla el solapamiento de los unigramas, esto es, las palabras individuales.
@@ -1013,10 +910,14 @@ Variaciones dentro de ROUGE, todas comparando el sistema con los documentos de r
     * ROUGE-S: Trabaja con digramas con salto, es decir, parejas de palabras respetando el orden.
     * ROUGE-SU: Combina los digramas de salto con relaciones entre unigramas.
 
---- 
+<center>
+    <img src="images/ROUGE.png" alt="Ejemplo ROUGE-L" class="center">
+    <div><span style="font-style: italic; font-size: 20;">Muestra para calcular la métrica ROUGE.</span></div>
+</center>
 
+---
 
-# Futuro del SLP y conclusiones
+# Inclusión de SLP en el marco NLP
 
 ---
 
@@ -1026,7 +927,7 @@ Aunque las lenguas de signos y las habladas difieren en cuanto a la modalidad, d
 
 * <span style="color: rgb(163, 42, 42);">Herramientas de NLP</span>: 
 	* Tokenizadores.
-	* Analizadores sintacticos.
+	* Analizadores sintácticos.
 	* Reconocimiento de entidades nombradas.
 	* Resolución de correferencia.
 
@@ -1088,7 +989,7 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
 
 * <span style="color: rgb(163, 42, 42);">Traducción</span>: ¿cómo pasar la información visual-gestual a/desde la información oral-textual?
 * <span style="color: rgb(163, 42, 42);">Alineación</span>: ¿cómo relacionar las unidades de la lengua de signos con las de la lengua hablada?
-* <span style="color: rgb(163, 42, 42);">Co=Aprendizaje</span>: ¿cómo aprovechar el conocimiento de la lengua hablada en la lengua de signos?
+* <span style="color: rgb(163, 42, 42);">Co-aprendizaje</span>: ¿cómo aprovechar el conocimiento de la lengua hablada en la lengua de signos?
 
 ---
 
@@ -1130,7 +1031,7 @@ El SLP está especialmente sujeta a tres de los principales retos técnicos en e
     </center>
     
     <center style="margin-top: 200px;">
-    <span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio B. Apellido, J. Antonio Rodríguez, Julián M. Apellido, Víctor Ramos</span><br>
+    <span style="font-variant: small-caps; font-size: 30; color: rgb(163, 42, 42);">Claudio Bustamente, Julián M. Galindo, Víctor Ramos, J. Antonio Rodríguez</span><br>
     </center>
     
     <center style="margin-top: 100px;">
